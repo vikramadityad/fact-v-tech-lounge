@@ -4,13 +4,7 @@ import PrimaryButton from "./PrimaryButton";
 import "../styles/Navbar.css";
 import logo from "../assets/images/nav-logo.png";
 
-const Navigation = ({
-  heroRef,
-  servicesRef,
-  aboutRef,
-  menuRef,
-  contactRef,
-}) => {
+const Navbar = ({ heroRef, servicesRef, aboutRef, menuRef, contactRef }) => {
   const location = useLocation();
 
   // Dynamic navigation items
