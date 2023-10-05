@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import PrimaryButton from "./PrimaryButton";
 import "../styles/Navbar.css";
-// import logo from "../assets/images/nav-logo.png";
+import logo from "../assets/images/nav-logo.png";
 
 const Navbar = ({ heroRef, servicesRef, aboutRef, menuRef, contactRef }) => {
   const location = useLocation();
