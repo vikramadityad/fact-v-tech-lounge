@@ -1,0 +1,48 @@
+/* Menu.css */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--white);
+  padding: 1em;
+  border-radius: 8px;
+}
+
+.menu-section {
+  margin-bottom: 2em;
+}
+
+.menu-section h2 {
+  color: var(--primary-dark);
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white-accent);
+  padding: 0.5em 1em;
+  border-radius: 4px;
+}
+
+.add-to-cart {
+  background-color: var(--secondary-highlight);
+  color: var(--white);
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-to-cart:hover {
+  background-color: var(--dark-accent);
+}

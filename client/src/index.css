@@ -1,0 +1,74 @@
+/* Reset and Basic Styles */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 18px;
+  background-color: var(--white);
+  font-family: "Futura PT", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Global Utility Classes */
+
+.text-center {
+  text-align: center;
+}
+
+.flex-between-center {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+/* CSS Variables */
+
+:root {
+  --primary-dark: #15164f;
+  --dark-accent: #003e7e;
+  --grey: #948bb6;
+  --secondary-highlight: #00e5b6;
+  --white: #fbf7ff;
+  --white-accent: #e8d5b5;
+}
+
+/* Link Styles */
+
+a {
+  font-weight: 500;
+  color: var(--primary-dark);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--dark-accent);
+}
+
+/* Additional Styles */
+
+.center-content {
+  max-width: 90em;
+  margin: 0 auto;
+}
+
+/* Media Queries */
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: var(--grey);
+    background-color: var(--white);
+  }
+  a:hover {
+    color: var(--secondary-highlight);
+  }
+  button {
+    background-color: var(--white-accent);
+  }
+}

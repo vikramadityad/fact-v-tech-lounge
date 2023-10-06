@@ -20,7 +20,7 @@
 }
 
 .btn.btn-secondary {
-  background-color: var(--secondary-highlight);
+  background-color: var(--white);
   color: var(--primary-dark);
 }
 
