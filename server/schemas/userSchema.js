@@ -1,4 +1,4 @@
-const User = require('./models/User');
+const User = require('../models/User');
 
 const resolvers = {
     Query: {
@@ -16,13 +16,29 @@ const resolvers = {
         createUser: async (_, { name, email, password }) => {
             try {
                 const user = new User({ name, email, password });
-                await user.save();
-                return user;
+                const token = createToken(user);
+                return { token, profile };
             } catch (error) {
                 //throw new Error('error'"I need to add graphQLError Still in utils/auth.js")
             }
-        },
-    },
+        login: async (_, { email, password }) => {
+            const user = await user.isCorrectPassword(password);
+
+            if (!user) {
+                //throw new Error This needs to be added in auth.js
+            }
+
+        const correctPw = await profile.isCorrectPassword(password);
+
+        if (!correctPw) {
+            //throw new Error this needs to be added in auth.js
+        }
+
+        const token = createToken(user);
+        return { token, user };
+        }
+      },
+   },
 };
 
 module.exports = resolvers;
