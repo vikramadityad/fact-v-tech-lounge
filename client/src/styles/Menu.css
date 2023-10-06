@@ -1,48 +1,59 @@
-/* Menu.css */
-
+/* Base container for the menu */
 .menu {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: var(--white);
-  padding: 1em;
-  border-radius: 8px;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
+/* Each category section */
 .menu-section {
-  margin-bottom: 2em;
+  width: 100%;
+  margin-bottom: 1.5em;
 }
 
+/* Category header */
 .menu-section h2 {
   color: var(--primary-dark);
   font-size: 1.5em;
-  margin-bottom: 1em;
-}
-
-.menu-items {
+  margin-bottom: 0.5em;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
-  gap: 1em;
+  justify-content: space-between;
 }
 
+/* Hidden by default, visible when active */
+.menu-items {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  width: 100%;
+}
+
+/* Active state of menu items */
+.menu-items.active {
+  max-height: 100svh;
+  transition: max-height 0.8s ease;
+}
+
+/* Individual menu item */
 .menu-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--white-accent);
   padding: 0.5em 1em;
-  border-radius: 4px;
+  border-radius: 0.25em;
+  width: 100%;
 }
 
-.add-to-cart {
-  background-color: var(--secondary-highlight);
-  color: var(--white);
-  border: none;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.add-to-cart:hover {
-  background-color: var(--dark-accent);
+/* Item image */
+.item-img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  margin-right: 1.5em;
+  border-radius: 8px;
 }
