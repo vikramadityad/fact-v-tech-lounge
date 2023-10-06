@@ -2,17 +2,17 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import PrimaryButton from "./PrimaryButton";
 import "../styles/Navbar.css";
-import logo from "../assets/images/nav-logo.png";
+import logo from "../images/logo-h.png";
 
-const Navbar = ({ heroRef, servicesRef, aboutRef, menuRef, contactRef }) => {
+const Navbar = ({ heroRef, eventsRef, aboutRef, menuRef, contactRef }) => {
   const location = useLocation();
 
   // Dynamic navigation items
   const navItems = [
     { name: "Home", path: "/", ref: heroRef },
-    { name: "Services", path: "/services", ref: servicesRef },
-    { name: "About", path: "/about", ref: aboutRef },
     { name: "Menu", path: "/menu", ref: menuRef },
+    { name: "Events", path: "/events", ref: eventsRef },
+    { name: "About", path: "/about", ref: aboutRef },
   ];
 
   const isActive = (path) => {
@@ -52,7 +52,7 @@ const Navbar = ({ heroRef, servicesRef, aboutRef, menuRef, contactRef }) => {
         </nav>
         <div className="header-right">
           <PrimaryButton
-            label="Contact Me"
+            label="Contact Us"
             action={handleContactClick}
             type="btn-primary"
           />
