@@ -28,7 +28,7 @@ function App() {
           aboutRef={aboutRef}
           contactRef={contactRef}
         />
-        <div /* className="center-content" */>
+        <div className="center-content">
           <div ref={heroRef} style={sectionStyle}>
             <Hero menuRef={menuRef} contactRef={contactRef} />
           </div>
