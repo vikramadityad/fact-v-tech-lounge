@@ -3,8 +3,16 @@ import { Link, useLocation } from "react-router-dom";
 import PrimaryButton from "./PrimaryButton";
 import "../styles/Navbar.css";
 import logo from "../images/logo-h.png";
+import CartButton from "./CartButton";
 
-const Navbar = ({ heroRef, eventsRef, aboutRef, menuRef, contactRef }) => {
+const Navbar = ({
+  heroRef,
+  eventsRef,
+  aboutRef,
+  menuRef,
+  cartRef,
+  contactRef,
+}) => {
   const location = useLocation();
 
   // Dynamic navigation items
@@ -50,7 +58,9 @@ const Navbar = ({ heroRef, eventsRef, aboutRef, menuRef, contactRef }) => {
             ))}
           </ul>
         </nav>
+
         <div className="header-right">
+          <CartButton />
           <PrimaryButton
             label="Contact Us"
             action={handleContactClick}
