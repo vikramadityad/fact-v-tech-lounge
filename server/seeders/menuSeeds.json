@@ -1,0 +1,257 @@
+[
+    { 
+        "name": "Student Boot Camp Platter", 
+        "category": "platter", 
+        "description": "This platter is designed to provide inspiration. Just like in coding, where every line of code matters, every ingredient in this platter serves a purpose.",
+        "includes": [
+            "Algorithm Avocado Toast",
+            "Binary Bites",
+            "Data Crunchers",
+            "Service Workers",
+            "Mini Bug-Free Brownies"
+        ],
+        "price": "40" 
+    },
+    { 
+        "name": "Objects & Variables Platter", 
+        "category": "platter", 
+        "description": " Just like the building blocks of code, each element on this platter has a distinct role and purpose, coming together to create a harmonious and flavorful experience.",
+        "includes": [
+            "HTML Hummus",
+            "CSS Chips & Style",
+            "Python Pizza",
+            "Ruby Roll-Ups",
+            "C++ Caramelized Onions",
+            "HTML (hotter than my last) Wings",
+            "Mini Boolean Brownies"
+        ],
+        "price": "50" 
+    },
+
+
+
+    { 
+        "name": "Algorithm Avocado Toast", 
+        "category": "pwa", 
+        "description": "Creamy, sliced avocados on whole-grain toast, topped with a sprinkle of sesame seeds and a drizzle of olive oil for that extra algorithmic crunch.",
+        "price": "15" 
+    },
+    { 
+        "name": "Binary Bites", 
+        "category": "pwa", 
+        "description": "A selection of crunchy, binary-inspired snacks such as pretzel sticks and pita chips served with a binary dip (made with a secret combination of 0s and 1s).",
+        "price": "12" 
+    },
+    { 
+        "name": "Data Crunchers", 
+        "category": "pwa", 
+        "description": "Grilled chicken, mixed with a data-driven blend of peppers, onions, and spices, wrapped in a tortilla, and served with a side of data sauce for that extra kick.",
+        "price": "15" 
+    },
+    { 
+        "name": "HTML Hummus", 
+        "category": "pwa", 
+        "description": "Creamy hummus served with an assortment of colorful, freshly sliced vegetables, including carrot sticks, cucumber, and bell peppers, ready to be encoded with your favorite flavors.",
+        "price": "12" 
+    },
+    { 
+        "name": "CSS Chips & Style", 
+        "category": "pwa", 
+        "description": "Crispy potato chips served with a variety of dipping sauces, representing the diverse styles and design choices that CSS (Cascading Style Sheets) can bring to web development.",
+        "price": "16" 
+    },
+    { 
+        "name": "Ruby Roll-Ups", 
+        "category": "pwa", 
+        "description": "8 Sushi-style rolls filled with fresh vegetables and crab meat, wrapped in seaweed and rice, paying homage to Ruby, a language that values simplicity and productivity.",
+        "price": "12" 
+    },
+    { 
+        "name": "C++ Caramelized Onions", 
+        "category": "Sweet caramelized onions served on toasted bread, representing the complex and multifaceted nature of C++, a language used for a wide range of applications.", 
+        "description": "pwa",
+        "price": "12" 
+    },
+    { 
+        "name": "HTML (hotter than my last) Wings", 
+        "category": "pwa", 
+        "description": "These wings are generously coated in a fiery CSS sauce, made with ghost peppers and habanero chili for a coding challenge for your taste buds.",
+        "price": "16" 
+    },
+    { 
+        "name": "Git Pushers", 
+        "category": "pwa", 
+        "description": "6 Mini Burger Sliders, a tech-inspired twist on a classic favorite. Where pushing your changes to a repository is a crucial step, these sliders push all the right buttons for your taste buds.",
+        "price": "15" 
+    },
+    { 
+        "name": "Webpack Wings", 
+        "category": "pwa", 
+        "description": "Tender chicken wings coated in a smoky barbecue sauce that represents the concept of bundling code, ensuring all the flavors meld together perfectly.",
+        "price": "16" 
+    },
+    { 
+        "name": "Load Time Fries", 
+        "category": "pwa", 
+        "description": "Crispy seasoned fries served with a side of Load Time ketchup, highlighting the importance of fast loading times in web development.",
+        "price": "8" 
+    },
+    { 
+        "name": "Service Workers", 
+        "category": "pwa", 
+        "description": "A delightful and innovative take on the classic mozzarella sticks you know and love. They're crispy on the outside, oozing with cheesy goodness on the inside.",
+        "price": "12" 
+    },
+    { 
+        "name": "Workbox Wings", 
+        "category": "pwa", 
+        "description": "Crispy chicken wings with a zesty -Cache Crunch- dry rub, symbolizing the caching functionality of service workers, which stores and retrieves web assets for lightning-fast performance.",
+        "price": "16" 
+    },
+    { 
+        "name": "Renders", 
+        "category": "pwa", 
+        "description": "Miniature potato wedges served in a stack, resembling lines of code, with each layer flavored differently, representing the compilation process of turning code into a functioning program.",
+        "price": "12" 
+    },
+    { 
+        "name": "Syntax Salad", 
+        "category": "server", 
+        "description": "A colorful mix of fresh greens, cherry tomatoes, and sliced cucumbers, served with a tangy syntax-check dressing, to ensure your code remains clean and error-free.",
+        "price": "11" 
+    },
+    { 
+        "name": "CSS Salad", 
+        "category": "server", 
+        "description": "Just as CSS brings style and structure to web pages, this salad combines a symphony of flavors, colors, and textures to create a visually appealing and delicious dining experience. This caesar style salad brings a blend of fresh and crisp lettuce leaves, toasted croutons, plump black olives that add a savory touchwith a creamy and tangy Caesar dressing that coats the lettuce leaves, topped with grated Parmesan cheese that adds a savory and slightly nutty taste",
+        "price": "12" 
+    },
+    { 
+        "name": "Pseudo Salad", 
+        "category": "server", 
+        "description": "This unique salad blurs the lines between appearance and reality, creating a delightful culinary illusion that surprises and intrigues. Get this: A bed of clear, gelatinous -lettuce- that mimics the appearance of greens but disappears upon contact, leaving behind a refreshing, herb-infused essence. Then there's the tiny crouton-shaped sugar sculptures with tomatoes that appear to be whole but, when bitten into, burst into a cool and tangy tomato-flavored foam, along with delicate, translucent edible flowers with a subtle floral flavor that dances on your taste buds! We top this off with a crystal-clear, color-shifting dressing that changes both its appearance and taste as you drizzle it over the salad, offering a symphony of flavors from sweet to spicy to tangy. Welcome to AI!",
+        "price": "12" 
+    },
+
+
+
+    { 
+        "name": "JavaScript Jambalaya", 
+        "category": "server", 
+        "description": " A flavorful jambalaya made with a medley of meats, vegetables, and spices, symbolizing the dynamic and versatile nature of JavaScript, the language that brings interactivity to the web. Served with a side of garlic bread.",
+        "price": "16" 
+    },
+    { 
+        "name": "Python Pizza", 
+        "category": "server", 
+        "description": "A personal nine inch classic pizza topped with a variety of fresh ingredients, reflecting the simplicity and elegance of Python, a programming language known for its readability and ease of use.",
+        "price": "14" 
+    },
+    { 
+        "name": "Slack Burger", 
+        "category": "server", 
+        "description": "A delicious tribute to the world of coding and collaboration, featuring a juicy Angus beef double patty, seasoned to perfection including layers of creamy cheddar and Swiss cheeses, crispy bacon strips, sliced tomato, crisp lettuce, tangy pickle with a hint of garlic with a zesty and vibrant relish sauce on a soft sesame seed bun that holds it all together, symbolizing the foundation of any great code project.",
+        "price": "18" 
+    },
+    { 
+        "name": "Array Sandwich", 
+        "category": "server", 
+        "description": "A Flavorful Concatenation: Thin slices of turkey, with layers of cheddar cheese, melted to creamy perfection and a colorful array of fresh lettuce, tomato, bell peppers, and red onions, topped off with a zesty dijon mustard dressing on a hearty focaccia bread that serves as the foundation of your sandwich, just like functions are the backbone of many programs.",
+        "price": "17" 
+    },
+    { 
+        "name": "Fetch Wrap", 
+        "category": "server", 
+        "description": " A culinary creation that pays tribute to the power of the Fetch API in modern web development. Tender strips of Angus steak, marinated to perfection with spicy jalapeños, creamy slices of avocado, crispy cucumber slices, crumbled feta cheese, roasted red bell peppers on a bed of fresh arugula leaves coated in our creamy ranch dressing with a hint of responsiveness, much like the need for responsive design in modern web applications.",
+        "price": "18" 
+    },
+    { 
+        "name": "Sequelize Sandwich", 
+        "category": "server", 
+        "description": "Just as Sequelize simplifies database interactions, this sandwich combines layers of flavors and textures to create a symphony for your taste buds. A sturdy Schema sourdough bread slice that forms the foundation of your sandwich combines a database of thin slices of deli-style turkey with model mozzarella, sun-dried tomatoes, with a creamy avocado spread on s bed of mixed greens with a drizzle of vinaigrette, representing the middleware that processes and manipulates data as it flows through your web application. ",
+        "price": "18" 
+    },
+    { 
+        "name": "Mongo Burger", 
+        "category": "server", 
+        "description": "Just as MongoDB excels in handling vast amounts of data, this burger stacks three delicious patties to create a coding feast of flavors and textures. This masterpiece includes three juicy beef patties cooked to perfection, crispy pork belly strips that add a smoky crunch, melted jalapeño jack cheese infused with the spirit of JSON, thinly sliced red onions, crisp lettuce, sliced tomato, topped off with garlic dill pickle on a fresh baked sesame seed bun, representing the structured syntax that brings order to code. ",
+        "price": "22" 
+    },
+    { 
+        "name": "React Burger", 
+        "category": "server", 
+        "description": "Just as React simplifies building user interfaces, this burger brings together a symphony of flavors and ingredients to create a harmonious and delicious experience. Featuring two succulent beef patties, symbolizing React's reusable and modular components, the building blocks of dynamic web interfaces paired with melted cheddar cheese, crisp lettuce, thinly sliced red onions, sliced tomato, sweet maple bacon, zesy pickles, with spicy jalapeño slices that add a kick to your burger, mirroring the JSX syntax used to write React components... all on a fresh baked brioche bun! ",
+        "price": "20" 
+    },
+    { 
+        "name": "Weekly Wrap Up", 
+        "category": "server", 
+        "description": "Just as you wrap up your weekly coding tasks, this wrap brings together a delightful array of flavors and ingredients in perfect harmony. Inside this wrap you will find tender, marinated chicken strips cooked to perfection, a flavorful rice pilaf with mixed vegetables, thinly sliced red onions, roasted bell peppers, black beans, fresh spinach, a creamy avocado dressing inside a soft, whole wheat tortilla that wraps up your coding journey.",
+        "price": "18" 
+    },
+
+
+
+
+    { 
+        "name": "Responsive Ribs", 
+        "category": "client", 
+        "description": "Just as responsive design adapts to different screen sizes, this dish combines a symphony of flavors and textures to create a memorable dining experience. A generous serving of slow-cooked, tender ribs that represent the hearty backbone of your meal, much like a well-structured website. A rich and savory Grid gravy, reminiscent of CSS Grid, which organizes content into responsive grids on webpages. A medley of fresh and colorful Media Query Vegetables that symbolize the importance of media queries in responsive design, adjusting content for different devices. A tangy Viewport Vinaigrette dressing drizzled over the vegetables, representing the viewport meta tag used in web development to control how web content is displayed on various devices. Served with crispy Flexbox Fries seasoned to perfection, symbolizing the flexibility and adaptability of CSS Flexbox, which simplifies layout design.",
+        "price": "32" 
+    },
+    { 
+        "name": "Express Steak", 
+        "category": "client", 
+        "description": "Just as Express.js simplifies server-side programming, it is a coding-themed culinary masterpiece that pays tribute to the speed and efficiency of the Express.js framework in web development. A premium cut of sirloin steak, cooked to perfection, symbolizing the robustness and backbone of your meal, much like Express.js serves as the backbone of server-side web applications, with RESTful sliced red onions with a hint of spice, Node.js Potatoes - golden roasted potatoes that highlight the synergy between Express.js and Node.js, and a side of Middleware Mixed Greens -  a  refreshing mixed greens salad served with a middleware-inspired dressing, symbolizing the middleware functions that enhance Express.js applications with additional features, along with Router Roma Tomatoes - sliced Roma tomatoes that add a burst of color to your dish, representing the routing capabilities of Express.js, which directs client requests to the appropriate server endpoints.",
+        "price": "38" 
+    },
+    { 
+        "name": "Big Data Surf & Turf", 
+        "category": "client", 
+        "description": "A Code-Driven Culinary Extravaganza! A generous portion of perfectly grilled steak, symbolizing the robustness and structure needed to manage big data, a succulent lobster tail that represents the richness and complexity of data, tender asparagus spears that highlight the importance of data-driven decision-making, red scallops that signify the structured nature of data in databases, with well-defined fields and relationships, topped with rich au jus sauce infused with complex flavors, symbolizing the algorithms used to process and extract valuable insights. Served with a side of creamy mashed potatoes and Sautéed haricot verts.",
+        "price": "44" 
+    },
+    { 
+        "name": "State Steak", 
+        "category": "client", 
+        "description": "Whether you're a coding enthusiast or simply a lover of exquisite meals, State Steak will delight your senses. A perfectly grilled tenderloin steak, cooked to your desired level of doneness, served with creamy sweet potatoes prepared in a stateful manner, tender asparagus spears, a rich au jus sauce infused with complex flavors, and roasted carrots that showcase responsiveness.",
+        "price": "38" 
+    },
+    { 
+        "name": "The Weekly Challenge", 
+        "category": "client", 
+        "description": "Our signature main course is not just a meal; it's a culinary adventure that tests your taste buds and showcases the creativity of our kitchen. It is a portion of succulent grilled chicken, garlic roasted shrimp, and a portion of tender beef, (or flavorful vegetarian alternatives), providing the foundation of your dish, with a medley of international flavors and ingredients, ranging from exotic spices to diverse vegetables and herbs, creating a harmonious fusion on your plate. A secret signature sauce, specially crafted by our chefs adds an element of surprise and excitement to your dish along with seasonal ingredients and garnishes that change regularly to keep -The Weekly Challenge- fresh and exciting with every visit. ",
+        "price": "48" 
+    },
+
+
+
+    { 
+        "name": "Bug-Free Brownies", 
+        "category": "desert", 
+        "description": "2 Moist and chewy brownies with a twist—each one comes with a small flag that you can use to mark your progress in debugging your code.",
+        "price": "10" 
+    },
+    { 
+        "name": "Boolean Brownie", 
+        "category": "desert", 
+        "description": "A large rich, fudgy brownie with two distinct flavors - one representing true and the other false, a playful nod to the logical constructs of Boolean variables in programming.",
+        "price": "8" 
+    },
+
+
+    { 
+        "name": "JavaScript Jolt Smoothie", 
+        "category": "drink", 
+        "description": "A smoothie bursting with the energy of JavaScript, blending bananas, berries, yogurt, and a hint of caffeine for those moments when you need a coding jolt.",
+        "price": "9" 
+    },
+    { 
+        "name": "Java Jolt", 
+        "category": "A bold, brewed coffee that provides the caffeine kick needed for those long coding sessions, reminding us of the power and efficiency of Java.", 
+        "description": "drink",
+        "price": "5" 
+    }
+    
+    
+  ]
