@@ -1,5 +1,5 @@
 const User = require('../models/User');
-const { createToken, AuthenticationError } = require('../utils/auth');
+const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -16,12 +16,20 @@ const resolvers = {
   Mutation: {
     createUser: async (_, { name, email, password }) => {
       try {
+        const existingUser = await User.findOne({ email });
+
+        if (existingUser) {
+          throw new Error('User with this email already exists');
+        }
+
         const user = new User({ name, email, password });
         await user.save();
-        const token = createToken(user);
+        
+        const token = signToken(user);
+        console.log('Generated Token:', token);
         return { token, user };
       } catch (error) {
-        throw AuthenticationError;
+        throw error;
       }
     },
 
@@ -30,12 +38,15 @@ const resolvers = {
         const user = await User.findOne({ email });
 
         if (!user || !(await user.isCorrectPassword(password))) {
+          console.error('Authentication failed. Invalid credentials.');
           throw AuthenticationError;
         }
 
-        const token = createToken(user);
+        const token = signToken(user);
+        console.log('User authenticated. Token:', token);
         return { token, user };
       } catch (error) {
+        console.error('Authentication failed. Error:', error);
         throw AuthenticationError;
       }
     },
