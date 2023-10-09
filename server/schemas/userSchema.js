@@ -34,22 +34,20 @@ const resolvers = {
     },
 
     login: async (_, { email, password }) => {
-      try {
-        const user = await User.findOne({ email });
-
-        if (!user || !(await user.isCorrectPassword(password))) {
-          console.error('Authentication failed. Invalid credentials.');
+        try {
+          const user = await User.findOne({ email });
+      
+          if (!user || !(await user.isCorrectPassword(password))) {
+            throw AuthenticationError;
+          }
+      
+          const token = signToken(user);
+          return { token, user };
+        } catch (error) {
           throw AuthenticationError;
         }
-
-        const token = signToken(user);
-        console.log('User authenticated. Token:', token);
-        return { token, user };
-      } catch (error) {
-        console.error('Authentication failed. Error:', error);
-        throw AuthenticationError;
-      }
-    },
+      },
+      
   },
 };
 
