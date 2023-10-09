@@ -1,44 +1,54 @@
 const User = require('../models/User');
+const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
-    Query: {
-        getUser: async (_, { name }) => {
-            try {
-                const user = await User.findOne({ name });
-                return user;
-            } catch (error) {
-              //throw new Error('Error'" I need to add GraphQLError Still in Utils/auth.js")
-            }
-        },
+  Query: {
+    getUser: async (_, { name }) => {
+      try {
+        const user = await User.findOne({ name });
+        return user;
+      } catch (error) {
+        throw AuthenticationError;
+      }
+    },
+  },
+
+  Mutation: {
+    createUser: async (_, { name, email, password }) => {
+      try {
+        const existingUser = await User.findOne({ email });
+
+        if (existingUser) {
+          throw new Error('User with this email already exists');
+        }
+
+        const user = new User({ name, email, password });
+        await user.save();
+        
+        const token = signToken(user);
+        console.log('Generated Token:', token);
+        return { token, user };
+      } catch (error) {
+        throw error;
+      }
     },
 
-    Mutation: {
-        createUser: async (_, { name, email, password }) => {
-            try {
-                const user = new User({ name, email, password });
-                const token = createToken(user);
-                return { token, profile };
-            } catch (error) {
-                //throw new Error('error'"I need to add graphQLError Still in utils/auth.js")
-            }
-        login: async (_, { email, password }) => {
-            const user = await user.isCorrectPassword(password);
-
-            if (!user) {
-                //throw new Error This needs to be added in auth.js
-            }
-
-        const correctPw = await profile.isCorrectPassword(password);
-
-        if (!correctPw) {
-            //throw new Error this needs to be added in auth.js
-        }
-
-        const token = createToken(user);
-        return { token, user };
+    login: async (_, { email, password }) => {
+        try {
+          const user = await User.findOne({ email });
+      
+          if (!user || !(await user.isCorrectPassword(password))) {
+            throw AuthenticationError;
+          }
+      
+          const token = signToken(user);
+          return { token, user };
+        } catch (error) {
+          throw AuthenticationError;
         }
       },
-   },
+      
+  },
 };
 
 module.exports = resolvers;

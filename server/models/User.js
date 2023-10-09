@@ -11,7 +11,7 @@ const userSchema = new Schema({
         type: String,
         required: true,
         unique: true,
-        trime: true,
+        trim: true,
         lowercase: true,
     },
     password: {
@@ -20,7 +20,7 @@ const userSchema = new Schema({
     },
 });
 
-userSchema.pre('save', async function (next){
+userSchema.pre('save', async function (next) {
     try {
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(this.password, salt);
@@ -31,7 +31,7 @@ userSchema.pre('save', async function (next){
     }
 });
 
-userSchema.methods.comparePassword = async function (password) {
+userSchema.methods.isCorrectPassword = async function (password) {
     try {
         return await bcrypt.compare(password, this.password);
     } catch (error) {
@@ -39,6 +39,6 @@ userSchema.methods.comparePassword = async function (password) {
     }
 };
 
-const User = model('Profile', userSchema);
+const User = model('User', userSchema);
 
 module.exports = User;
