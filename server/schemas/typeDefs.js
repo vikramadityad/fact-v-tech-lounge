@@ -17,7 +17,7 @@ type Menu {
     image: String!
     description: String!
     includes: String!
-    price: Number!
+    price: Float!
 }
 
 type Query {
