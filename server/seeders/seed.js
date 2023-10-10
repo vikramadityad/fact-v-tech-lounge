@@ -1,4 +1,3 @@
 const db = require('../config/db');
-const userSeeds = require('./userSeeds.json');
-const menuSeeds = require('./menuSeeds.json');
-const { User, Menu } = require('../models');
+const userSeeds = requie('./userSeeds.json');
+const { User } = require('../models');
