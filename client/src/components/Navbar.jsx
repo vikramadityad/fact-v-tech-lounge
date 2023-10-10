@@ -1,17 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import PrimaryButton from "./PrimaryButton";
 import "../styles/Navbar.css";
 import logo from "../images/logo-h.png";
 import CartButton from "./CartButton";
+// import CartButton from "./CartButton";
 
 const Navbar = ({
   heroRef,
   eventsRef,
   aboutRef,
   menuRef,
-  cartRef,
   contactRef,
+  itemCounter,
 }) => {
   const location = useLocation();
 
@@ -58,14 +59,14 @@ const Navbar = ({
             ))}
           </ul>
         </nav>
-
+        {/* <CartButton /> */}
         <div className="header-right">
-          <CartButton />
           <PrimaryButton
             label="Contact Us"
             action={handleContactClick}
             type="btn-primary"
           />
+          <CartButton itemCounter={itemCounter} />
         </div>
       </div>
     </header>
