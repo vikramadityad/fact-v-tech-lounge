@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Category from "./Category";
 import "../styles/Menu.css";
 
-const Menu = () => {
+const Menu = ({ itemCounter, setItemCounter }) => {
   const [menuItems, setMenuItems] = useState([]); // State to hold menu items
 
   // Use effect to fetch menu items when the component mounts
@@ -117,6 +117,8 @@ const Menu = () => {
           key={index}
           category={category}
           items={groupedByCategory[category]}
+          itemCounter={itemCounter}
+          setItemCounter={setItemCounter}
         />
       ))}
     </div>
