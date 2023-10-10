@@ -10,14 +10,14 @@ type AuthPayload {
     user: User
   }
 
-  type Menu {
+type Menu {
     name: String!
-    id: String!
+    _id: ID!
     category: String!
     image: String!
     description: String!
     includes: String!
-    price: Number!
+    price: float!
 }
 
 type Query {
