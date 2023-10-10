@@ -14,6 +14,7 @@ const Menu = ({ itemCounter, setItemCounter }) => {
         category: "Drinks",
         imgUrl: "src/images/java.jpg",
         description: "Get your daily dose of caffeine and compilation!",
+        price: 7,
       },
       {
         _id: "2",
@@ -21,6 +22,7 @@ const Menu = ({ itemCounter, setItemCounter }) => {
         category: "Drinks",
         imgUrl: "src/images/python.jpg",
         description: "Indent your thirst away!",
+        price: 8,
       },
       {
         _id: "3",
@@ -28,6 +30,7 @@ const Menu = ({ itemCounter, setItemCounter }) => {
         category: "Food",
         imgUrl: "src/images/ctrl_alt_del.jpg",
         description: "Three finger salute to your hunger!",
+        price: 9,
       },
       {
         _id: "4",
@@ -35,6 +38,7 @@ const Menu = ({ itemCounter, setItemCounter }) => {
         category: "Food",
         imgUrl: "src/images/404.jpg",
         description: "You won't get lost munching these!",
+        price: 14,
       },
       {
         _id: "5",
@@ -42,6 +46,7 @@ const Menu = ({ itemCounter, setItemCounter }) => {
         category: "Food",
         imgUrl: "src/images/bigdata.jpg",
         description: "For those with a big appetite for data and calories!",
+        price: 16,
       },
       {
         _id: "6",
@@ -49,6 +54,7 @@ const Menu = ({ itemCounter, setItemCounter }) => {
         category: "Desserts",
         imgUrl: "src/images/machine_learning.jpg",
         description: "A dessert so good, it improves over time!",
+        price: 8,
       },
       {
         _id: "7",
@@ -56,6 +62,7 @@ const Menu = ({ itemCounter, setItemCounter }) => {
         category: "Starters",
         imgUrl: "src/images/git.jpg",
         description: "Commit to your appetite!",
+        price: 7,
       },
       {
         _id: "8",
@@ -63,6 +70,7 @@ const Menu = ({ itemCounter, setItemCounter }) => {
         category: "Starters",
         imgUrl: "src/images/firewall.jpg",
         description: "Too hot to bypass!",
+        price: 4,
       },
       {
         _id: "9",
@@ -70,6 +78,7 @@ const Menu = ({ itemCounter, setItemCounter }) => {
         category: "Specials",
         imgUrl: "src/images/aviad.jpg",
         description: "A brew so complex, it solves itself!",
+        price: 3,
       },
       {
         _id: "10",
@@ -77,6 +86,7 @@ const Menu = ({ itemCounter, setItemCounter }) => {
         category: "Specials",
         imgUrl: "src/images/chris.jpg",
         description: "Refresh your code and your thirst!",
+        price: 6,
       },
       {
         _id: "11",
@@ -84,6 +94,7 @@ const Menu = ({ itemCounter, setItemCounter }) => {
         category: "Specials",
         imgUrl: "src/images/vikram.jpg",
         description: "For when you need to git commit and unwind!",
+        price: 8,
       },
       {
         _id: "12",
@@ -91,6 +102,7 @@ const Menu = ({ itemCounter, setItemCounter }) => {
         category: "Specials",
         imgUrl: "src/images/terrence.jpg",
         description: "Strongly typed and strongly spiced!",
+        price: 4,
       },
       {
         _id: "13",
@@ -98,6 +110,7 @@ const Menu = ({ itemCounter, setItemCounter }) => {
         category: "Specials",
         imgUrl: "src/images/farrah.jpg",
         description: "A blend of the best frameworks in one cup!",
+        price: 9,
       },
     ];
     setMenuItems(fetchedData);
