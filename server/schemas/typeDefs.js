@@ -10,8 +10,20 @@ type AuthPayload {
     user: User
   }
 
+  type Menu {
+    name: String!
+    id: String!
+    category: String!
+    image: String!
+    description: String!
+    includes: String!
+    price: Number!
+}
+
 type Query {
     getUser(name: String!): User
+    menuItems: [Menu]!
+    menuItem(menuId: ID!): Menu
 }
 
 type Mutation {
