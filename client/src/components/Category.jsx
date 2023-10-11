@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import MenuItem from "./MenuItem";
 
-const Category = ({ category, items, itemCounter, setItemCounter }) => {
+const Category = ({
+  category,
+  items,
+  itemCounter,
+  setItemCounter,
+  cartItems,
+  setCartItems,
+}) => {
   const [isActive, setIsActive] = useState(false);
   console.log(items);
 
@@ -21,6 +28,8 @@ const Category = ({ category, items, itemCounter, setItemCounter }) => {
             item={item}
             itemCounter={itemCounter}
             setItemCounter={setItemCounter}
+            setCartItems={setCartItems}
+            cartItems={cartItems}
           />
         ))}
       </div>

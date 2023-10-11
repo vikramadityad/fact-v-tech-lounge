@@ -1,9 +1,16 @@
 import { Button } from "react-bootstrap";
 import { Offcanvas } from "react-bootstrap";
 import { useState } from "react";
+import SideBar from "./SideBar";
 
-const CartButton = ({ itemCounter }) => {
+const CartButton = ({
+  itemCounter,
+  setItemCounter,
+  cartItems,
+  setCartItems,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
+  console.log(cartItems);
 
   const cartBtnHandler = () => {
     if (!isOpen) {
@@ -12,6 +19,14 @@ const CartButton = ({ itemCounter }) => {
   };
   const closeCart = () => {
     setIsOpen(false);
+    console.log("clicked");
+  };
+
+  // Function to remove an item from the cart
+  const removeCartItem = (itemToRemove) => {
+    const updatedCart = cartItems.filter((item) => item !== itemToRemove);
+    setItemCounter(itemCounter - 1); // Decrement itemCounter
+    setCartItems(updatedCart); // Update cartItems state
   };
 
   return (
@@ -22,8 +37,7 @@ const CartButton = ({ itemCounter }) => {
           width: "3rem",
           height: "3rem",
           position: "relative",
-          marginRight: "20px",
-          marginLeft: "10px",
+          marginRight: "30px",
         }}
         variant="outline-primary"
         className="rounded-circle"
@@ -56,7 +70,16 @@ const CartButton = ({ itemCounter }) => {
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Cart</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body></Offcanvas.Body>
+        <Offcanvas.Body>
+          <SideBar
+            key={cartItems._id}
+            cartItems={cartItems}
+            setItemCounter={setItemCounter}
+            itemCounter={itemCounter}
+            setCartItems={setCartItems}
+            removeCartItem={removeCartItem}
+          />
+        </Offcanvas.Body>
       </Offcanvas>
     </>
   );

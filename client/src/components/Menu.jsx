@@ -2,10 +2,8 @@ import React, { useState, useEffect } from "react";
 import Category from "./Category";
 import "../styles/Menu.css";
 
-const Menu = ({ itemCounter, setItemCounter }) => {
-  const [menuItems, setMenuItems] = useState([]); // State to hold menu items
-
-  // Use effect to fetch menu items when the component mounts
+const Menu = ({ itemCounter, setItemCounter, cartItems, setCartItems }) => {
+  const [menuItems, setMenuItems] = useState([]); // Use effect to fetch menu items when the component mounts
   useEffect(() => {
     const fetchedData = [
       {
@@ -132,6 +130,8 @@ const Menu = ({ itemCounter, setItemCounter }) => {
           items={groupedByCategory[category]}
           itemCounter={itemCounter}
           setItemCounter={setItemCounter}
+          setCartItems={setCartItems}
+          cartItems={cartItems}
         />
       ))}
     </div>
