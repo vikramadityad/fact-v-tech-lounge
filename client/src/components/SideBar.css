@@ -1,0 +1,36 @@
+.sidebar_items {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 2px solid gray;
+  margin-top: 15px;
+}
+.sidebar_items img {
+  width: 125px;
+  height: 125px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px black;
+  object-fit: cover;
+}
+.sidebar_category {
+  display: flex;
+  align-items: flex-end;
+}
+.sidebar_description {
+  padding-left: 15px;
+}
+.sidebar_cat {
+  font-size: 0.6rem;
+}
+.sidebar_title {
+  font-size: 0.9rem;
+}
+.sidebar_total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.sidebar_total h2 {
+  font-size: 1.5rem;
+}

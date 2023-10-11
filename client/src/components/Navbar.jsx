@@ -13,6 +13,9 @@ const Navbar = ({
   menuRef,
   contactRef,
   itemCounter,
+  setItemCounter,
+  cartItems,
+  setCartItems,
 }) => {
   const location = useLocation();
 
@@ -59,14 +62,21 @@ const Navbar = ({
             ))}
           </ul>
         </nav>
-        {/* <CartButton /> */}
-        <div className="header-right">
+
+        <div className="header-right" style={{ display: "flex" }}>
+          <div>
+            <CartButton
+              itemCounter={itemCounter}
+              setItemCounter={setItemCounter}
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+            />
+          </div>
           <PrimaryButton
             label="Contact Us"
             action={handleContactClick}
             type="btn-primary"
           />
-          <CartButton itemCounter={itemCounter} />
         </div>
       </div>
     </header>

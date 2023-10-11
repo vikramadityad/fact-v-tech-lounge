@@ -11,6 +11,7 @@ import "./index.css";
 
 function App() {
   const [itemCounter, setItemCounter] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
 
   const heroRef = useRef(null);
   const menuRef = useRef(null);
@@ -30,13 +31,21 @@ function App() {
           aboutRef={aboutRef}
           contactRef={contactRef}
           itemCounter={itemCounter}
+          setItemCounter={setItemCounter}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
         />
         <div className="center-content">
           <div ref={heroRef} style={sectionStyle}>
             <Hero menuRef={menuRef} contactRef={contactRef} />
           </div>
           <div ref={menuRef} style={sectionStyle}>
-            <Menu setItemCounter={setItemCounter} itemCounter={itemCounter} />
+            <Menu
+              setItemCounter={setItemCounter}
+              itemCounter={itemCounter}
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+            />
           </div>
           {/* <div ref={eventsRef} style={sectionStyle}>
             <Events />
