@@ -31,8 +31,10 @@ const SideBar = ({
               <h6 className="sidebar_cat text-muted">Category: {i.category}</h6>
             </div>
           </div>
-          <button onClick={() => removeItem(i)}>Remove</button>
-          {formatCurrency(i.price)}
+          <div className="sidebar-btn">
+            <button onClick={() => removeItem(i)}>X</button>
+            {formatCurrency(i.price)}
+          </div>
         </div>
       ))}
 
@@ -40,6 +42,7 @@ const SideBar = ({
         <h2>Total: </h2>
         <h2>{formatCurrency(total)}</h2>
       </div>
+      <button className="sidebar_purchase">Purchase</button>
     </div>
   );
 };
