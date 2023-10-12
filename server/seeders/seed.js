@@ -7,6 +7,9 @@ db.once('open', async () => {
     try {
       await Menu.deleteMany({});
       await Menu.create(menuSeeds);
+
+      await User.deleteMany({});
+      await User.create(userSeeds);
   
       console.log('all done!');
       process.exit(0);
