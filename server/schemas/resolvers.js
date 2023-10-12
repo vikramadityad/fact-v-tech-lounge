@@ -1,5 +1,6 @@
 const User = require('../models/User');
 const { signToken, AuthenticationError } = require('../utils/auth');
+const { Menu } = require('../models/Menu');
 
 const resolvers = {
   Query: {
@@ -11,7 +12,15 @@ const resolvers = {
         throw AuthenticationError;
       }
     },
+    menuItems: async () => {
+      return await Menu.find({})
+    },
+
+    menuItem: async (parent, {menuId}) => {
+        return await Menu.findById({_id: menuId})
+    },
   },
+  
 
   Mutation: {
     createUser: async (_, { name, email, password }) => {
