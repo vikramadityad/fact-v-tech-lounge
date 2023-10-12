@@ -1,0 +1,67 @@
+.sidebar_items {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 2px solid gray;
+  margin-top: 15px;
+}
+.sidebar_items img {
+  width: 125px;
+  height: 125px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px black;
+  object-fit: cover;
+}
+.sidebar_category {
+  display: flex;
+  align-items: flex-end;
+}
+.sidebar_description {
+  padding-left: 15px;
+}
+.sidebar_cat {
+  font-size: 0.6rem;
+}
+.sidebar_title {
+  font-size: 0.9rem;
+}
+.sidebar_total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.sidebar_total h2 {
+  font-size: 1.5rem;
+}
+.sidebar-btn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 125px;
+  align-items: flex-end;
+}
+.sidebar-btn button {
+  background-color: red;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: white;
+  border: none;
+}
+.sidebar-btn button:hover {
+  box-shadow: 0 0 3px black;
+}
+.sidebar_purchase {
+  width: 100%;
+  background-color: green;
+  font-size: 1.4rem;
+  margin-top: 25px;
+  color: antiquewhite;
+  padding: 5px 0;
+  border-radius: 35px;
+  border: none;
+}
+.sidebar_purchase:hover {
+  box-shadow: 0 0 3px green;
+}

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
@@ -10,6 +10,9 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 
 function App() {
+  const [itemCounter, setItemCounter] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
+
   const heroRef = useRef(null);
   const menuRef = useRef(null);
   const eventsRef = useRef(null);
@@ -27,13 +30,22 @@ function App() {
           eventsRef={eventsRef}
           aboutRef={aboutRef}
           contactRef={contactRef}
+          itemCounter={itemCounter}
+          setItemCounter={setItemCounter}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
         />
         <div className="center-content">
           <div ref={heroRef} style={sectionStyle}>
             <Hero menuRef={menuRef} contactRef={contactRef} />
           </div>
           <div ref={menuRef} style={sectionStyle}>
-            <Menu />
+            <Menu
+              setItemCounter={setItemCounter}
+              itemCounter={itemCounter}
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+            />
           </div>
           {/* <div ref={eventsRef} style={sectionStyle}>
             <Events />
