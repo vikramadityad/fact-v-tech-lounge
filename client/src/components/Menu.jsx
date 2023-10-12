@@ -18,6 +18,8 @@ const GET_MENU_ITEMS = gql`
   }
 `;
 
+//TODO: add functionality so only users that schedule am event can order from the menu. (they can see the menu but not order from it)
+
 const Menu = ({ itemCounter, setItemCounter, cartItems, setCartItems }) => {
   const [menuItems, setMenuItems] = useState([]); // State to hold menu items
 
