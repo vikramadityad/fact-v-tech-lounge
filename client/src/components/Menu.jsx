@@ -18,7 +18,7 @@ const GET_MENU_ITEMS = gql`
   }
 `;
 
-const Menu = () => {
+const Menu = ({ itemCounter, setItemCounter, cartItems, setCartItems }) => {
   const [menuItems, setMenuItems] = useState([]); // State to hold menu items
 
   // Fetch data using Apollo Client
@@ -31,6 +31,7 @@ const Menu = () => {
     }
   }, [data]);
 
+  // Loading and error handling
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
@@ -48,6 +49,10 @@ const Menu = () => {
           key={index}
           category={category}
           items={groupedByCategory[category]}
+          itemCounter={itemCounter}
+          setItemCounter={setItemCounter}
+          setCartItems={setCartItems}
+          cartItems={cartItems}
         />
       ))}
     </div>
