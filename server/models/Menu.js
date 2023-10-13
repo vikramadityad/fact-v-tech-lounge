@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
 const menuSchema = new Schema({
   name: {
@@ -6,32 +6,32 @@ const menuSchema = new Schema({
     required: true,
   },
   _id: {
-      type: String,
-      required: true,
-    },
-   category: {
     type: String,
     required: true,
-   },
-   image: {
-    type: Buffer, 
+  },
+  category: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: Buffer,
     contentType: String,
     required: true,
-   },
-   description: {
+  },
+  description: {
     type: String,
     required: true,
-   },
-   includes: {
+  },
+  includes: {
     type: String,
     required: false,
-   },
-   price: {
+  },
+  price: {
     type: Number,
     required: true,
-   }    
+  },
 });
 
-const Menu = model('Menu', menuSchema);
+const Menu = model("Menu", menuSchema);
 
 module.exports = Menu;
