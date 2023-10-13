@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/vikramadityad/fact-v-tech-lounge#readme",
   "dependencies": {
-    "concurrently": "^8.2.1"
+    "concurrently": "^8.2.1",
+    "cors": "^2.8.5"
   }
 }

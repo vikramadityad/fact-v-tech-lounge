@@ -14,16 +14,16 @@ const menuSchema = new Schema({
     required: true,
   },
   image: {
-    type: Buffer,
+    type: String,
     contentType: String,
-    required: true,
   },
+
   description: {
     type: String,
     required: true,
   },
   includes: {
-    type: String,
+    type: [String],
     required: false,
   },
   price: {
