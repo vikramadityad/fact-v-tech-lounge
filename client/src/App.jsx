@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
-// import Evenets from "./components/Evenets";
+import Events from "./components/Events";
 // import About from "./components/About";
 // import Contact from "./components/Contact";
 // import Footer from "./components/Footer";
@@ -47,10 +47,10 @@ function App() {
               setCartItems={setCartItems}
             />
           </div>
-          {/* <div ref={eventsRef} style={sectionStyle}>
+           <div ref={eventsRef} style={sectionStyle}>
             <Events />
           </div>
-          <div ref={aboutRef} style={sectionStyle}>
+         {/* <div ref={aboutRef} style={sectionStyle}>
             <About />
           </div>
           <div ref={contactRef} style={sectionStyle}>
