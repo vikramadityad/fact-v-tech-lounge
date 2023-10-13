@@ -10,7 +10,6 @@ const CartButton = ({
   setCartItems,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(cartItems);
 
   const cartBtnHandler = () => {
     if (!isOpen) {
