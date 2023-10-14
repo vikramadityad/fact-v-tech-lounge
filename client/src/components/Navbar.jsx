@@ -5,7 +5,7 @@ import "../styles/Navbar.css";
 import logo from "../images/logo-h.png";
 import CartButton from "./CartButton";
 // import CartButton from "./CartButton";
-
+import About from "./About";
 const Navbar = ({
   heroRef,
   eventsRef,
