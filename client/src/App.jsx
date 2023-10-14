@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
 // import Evenets from "./components/Evenets";
-// import About from "./components/About";
+import About from "./components/About";
 // import Contact from "./components/Contact";
 // import Footer from "./components/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -57,11 +57,11 @@ function App() {
             </div>
             {/* <div ref={eventsRef} style={sectionStyle}>
             <Events />
-          </div>
-          <div ref={aboutRef} style={sectionStyle}>
-            <About />
-          </div>
-          <div ref={contactRef} style={sectionStyle}>
+          </div> */}
+            <div ref={aboutRef} style={sectionStyle}>
+              <About />
+            </div>
+            {/* <div ref={contactRef} style={sectionStyle}>
             <Contact />
           </div> */}
           </div>

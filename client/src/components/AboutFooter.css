@@ -1,0 +1,30 @@
+.about_footer {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.about_footer h4 {
+  font-size: 1.2rem;
+}
+.about_footer h5 {
+  font-size: 1rem;
+  padding: 40px 0 10px 0;
+}
+.about_footer div {
+  display: flex;
+}
+.about_footer img {
+  margin: 30px 15px 0;
+  cursor: pointer;
+}
+.about_footer img:hover {
+  box-shadow: 0 0 5px white;
+  border-radius: 50%;
+}
+.about_footer p {
+  margin: 10px 35px 0;
+}
