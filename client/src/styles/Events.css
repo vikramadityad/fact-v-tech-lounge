@@ -48,7 +48,7 @@ justify-content: center;
 }
 
 .event_popup {
-  /* display: block; */
+   display: block; 
   background-color: #e8d5b5;
   flex-wrap: wrap;
   width: 800px;

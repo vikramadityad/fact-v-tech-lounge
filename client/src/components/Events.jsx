@@ -1,74 +1,84 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Events.css";
 import PrimaryButton from "./PrimaryButton";
+import { useQuery, gql } from "@apollo/client";
 
 
 function Events() {
+    const [events, setEvents] = useState([]);
+    const [isButtonActive, setIsButtonActive] = useState(false);
 
-    //     const [popupVisible, setPopupVisible] = useState(false);
-    //     const [popupContent, setPopupContent] = useState({});
+    const handleButtonClick = () => {
+        setIsButtonActive(!isButtonActive);
+    };
+    const register = () => {
+        console.log('plese')
+    };
 
-    //     const openPopup = (event) => {
-    //         const { title, description, date, fee } = event;
-    //         setPopupContent({ title, description, date, fee });
-    //         setPopupVisible(true);
-    //     };
 
-    //     const closePopup = () => {
-    //         setPopupVisible(false);
-    //     };
+    const GET_EVENTS = gql`
+  query GetEvents {
+    events {
+      _id
+      name
+      image
+      description
+      fee
 
-    const { details, register } = () => {
-        console.log("testing");
     }
+  }
+`;
 
+    const { loading, error, data } = useQuery(GET_EVENTS);
 
+    useEffect(() => {
+        console.log('events1', data);
+        if (data) {
+            setEvents(data.events);
+            console.log('eveinner', events);
+        }
+    }, [data]);
+    console.log('eve', events);
 
 
     return (
         <section>
+
             <h1 className="event_header"> Upcoming Events </h1>
-            <div className="event_section">
-                <div className="event-item">
-                    <img className="item-img" src="src/images/menu-images/student-bootcamp-platter.jpg" alt="Event Picture" />
-                    <h3>Event Title</h3>
-                    <p>Event Description</p>
-                    <div className="event-links">
-                        <PrimaryButton
-                            label="Details"
-                            action={details}
-                            type="btn-primary"
-                        />
-                        <dialog className="event_popup">
-                            <button autofocus>Close</button>
-                            <h3>Event Title</h3>
-                            <p>Event Description</p>
-                            <p> Date: 10-Oct-2023 at 9:00am to 5:00pm </p>
-                            <p> Fee: $40 </p>
+            {events.map(item => {
+                return (<div key={item._id} className="event_section">
+                    <div className="event-item">
+                        <img className="item-img" src="src/images/menu-images/student-bootcamp-platter.jpg" alt="Event Picture" />
+                        <h3>{item.name}</h3>
+                        <p>{item.description}</p>
+                        <div className="event-links">
                             <PrimaryButton
-                            className="reg_btn"
-                                label="Register"
-                                action={register}
+                                label="Details"
+                                action={handleButtonClick}
                                 type="btn-primary"
                             />
-                        </dialog>
-                        {/* <button href="/" target="_blank" rel="noopener noreferrer">Register</button> */}
+                            <dialog className={isButtonActive ? 'event_popup' : 'inactive-button'}>
+                                <PrimaryButton
+                                    label="Close"
+                                    action={handleButtonClick}
+                                    type="btn-primary"
+                                />
+                                <h3>{item.name}</h3>
+                                <p>Description: {item.description}</p>
+                                <p> Fee: $ {item.fee} </p>
+                                <PrimaryButton
+                                    className="reg_btn"
+                                    label="Register"
+                                    action={register}
+                                    type="btn-primary"
+                                />
+                            </dialog>
+                            {/* <button href="/" target="_blank" rel="noopener noreferrer">Register</button> */}
+                        </div>
                     </div>
-                </div>
+                </div>)
+            })}
 
-
-
-            </div>
-
-            {/* {popupVisible && (
-                <div className="popup">
-                    <h3>{popupContent.title}</h3>
-                    <p>{popupContent.description}</p>
-                    <p>Date and Time: {popupContent.date}</p>
-                    <p>Event Fee: {popupContent.fee}</p>
-                    <button onClick={closePopup}>Close</button>
-                </div>
-            )} */}
 
         </section>
     );
