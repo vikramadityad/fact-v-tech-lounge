@@ -1,7 +1,8 @@
 const db = require("../config/db");
 const userSeeds = require("./userSeeds.json");
 const menuSeeds = require("./menuSeeds.json");
-const { User, Menu } = require("../models");
+const eventSeeds = require("./eventSeeds.json");
+const { User, Menu, Event } = require("../models");
 
 db.once("open", async () => {
   try {
@@ -10,6 +11,9 @@ db.once("open", async () => {
 
     await User.deleteMany({});
     await User.create(userSeeds);
+
+    await Event.deleteMany({});
+    await Event.create(eventSeeds);
 
     console.log("all done!");
     process.exit(0);

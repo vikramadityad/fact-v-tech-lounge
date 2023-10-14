@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const { signToken, AuthenticationError } = require("../utils/auth");
 const Menu = require("../models/Menu");
+const Event = require("../models/Event");
 
 const resolvers = {
   Query: {
@@ -23,6 +24,18 @@ const resolvers = {
     },
     menuItem: async (parent, { menuId }) => {
       return await Menu.findById({ _id: menuId });
+    },
+    events: async () => {
+      try {
+        const events = await Event.find();
+        return events;
+      } catch (error) {
+        console.error("Error fetching events:", error);
+        throw error; // Rethrow the error
+      }
+    },
+    event: async (parent, { eventId }) => {
+      return await Event.findById({ _id: eventId });
     },
   },
   Mutation: {
