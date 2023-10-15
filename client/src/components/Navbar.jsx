@@ -6,6 +6,8 @@ import logo from "../images/logo-h.png";
 import CartButton from "./CartButton";
 // import CartButton from "./CartButton";
 import About from "./About";
+import Auth from "./Login";
+
 const Navbar = ({
   heroRef,
   eventsRef,
@@ -18,6 +20,8 @@ const Navbar = ({
   setCartItems,
 }) => {
   const location = useLocation();
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Dynamic navigation items
   const navItems = [
@@ -29,6 +33,14 @@ const Navbar = ({
 
   const isActive = (path) => {
     return location.pathname === path ? "active" : "";
+  };
+
+  const handleLoginClick = () => {
+    setIsLoginModalOpen(true);
+  };
+  const handleCloseLoginModal = () => {
+    setIsLoginModalOpen(false);
+    setIsLoggedIn(true);
   };
 
   const handleContactClick = () => {
@@ -72,13 +84,22 @@ const Navbar = ({
               setCartItems={setCartItems}
             />
           </div>
-          <PrimaryButton
-            label="Contact Us"
-            action={handleContactClick}
-            type="btn-primary"
-          />
+          {isLoggedIn ? (
+            <PrimaryButton label="My Account" type="btn-secondary" />
+          ) : (
+            <PrimaryButton
+              label="Login"
+              action={handleLoginClick}
+              type="btn-secondary"
+            />
+          )}
         </div>
       </div>
+      {isLoginModalOpen && (
+        <div className="login-modal">
+          <Auth onClose={handleCloseLoginModal} />
+        </div>
+      )}
     </header>
   );
 };
