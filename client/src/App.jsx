@@ -1,19 +1,36 @@
 import React, { useRef, useState } from "react";
 // Added Apollo Client Imports
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink, } from "@apollo/client";
+import { setContext } from '@apollo/client/link/context';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
-import Events from "./components/Events";
-import About from "./components/About";
+// import Evenets from "./components/Evenets";
+// import About from "./components/About";
 // import Contact from "./components/Contact";
 // import Footer from "./components/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 
-// Initialized Apollo Client
+
+const httpLink = createHttpLink({
+  uri: 'http://localhost:4000/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+
+  const token = localStorage.getItem('id_token');
+
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql",
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
@@ -55,13 +72,13 @@ function App() {
                 setCartItems={setCartItems}
               />
             </div>
-            <div ref={eventsRef} style={sectionStyle}>
+            {/* <div ref={eventsRef} style={sectionStyle}>
             <Events />
           </div>
-           <div ref={aboutRef} style={sectionStyle}>
-              <About />
-            </div>
-            {/* <div ref={contactRef} style={sectionStyle}>
+          <div ref={aboutRef} style={sectionStyle}>
+            <About />
+          </div>
+          <div ref={contactRef} style={sectionStyle}>
             <Contact />
           </div> */}
           </div>
