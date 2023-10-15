@@ -21,13 +21,20 @@ const typeDefs = gql`
     includes: [String]!
     price: Float!
   }
-  
+
   type Event {
     _id: ID!
     name: String!
     image: String!
     description: String!
     fee: Float!
+  }
+
+  type ContactForm {
+    _id: ID!
+    name: String!
+    email: String!
+    message: String!
   }
 
   type Query {
@@ -39,8 +46,13 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createUser(name: String!, email: String!, password: String!): AuthPayload
-    login(email: String!, password: String!): AuthPayload
+    createUser(name: String!, email: String!, password: String!): User!
+    login(email: String!, password: String!): User!
+    addContactForm(
+      name: String!
+      email: String!
+      message: String!
+    ): ContactForm!
   }
 `;
 

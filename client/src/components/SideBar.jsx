@@ -1,4 +1,4 @@
-import "./SideBar.css";
+import "../styles/SideBar.css";
 import formatCurrency from "../utilities/formatCurrency";
 import { useState } from "react";
 

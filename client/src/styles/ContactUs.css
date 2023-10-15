@@ -1,0 +1,19 @@
+.contact-us {
+  margin: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--grey);
+}
+
+.submit-button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}

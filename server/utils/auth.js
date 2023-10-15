@@ -31,7 +31,7 @@ const authMiddleware = function ({ req }) {
     const { data } = jwt.verify(token, secretKey, { maxAge: expiration });
     req.user = data;
     console.log("Token verified. User data:", data);
-  } catch {
+  } catch (error) {
     console.error("Invalid token");
     console.error("Invalid token. Error:", error);
   }

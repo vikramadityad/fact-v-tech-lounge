@@ -1,4 +1,4 @@
-import "./AboutFooter.css";
+import "../styles/Footer.css";
 import facebook from "../images/icons/facebookIcon.png";
 import twitter from "../images/icons/twitterIcon.png";
 

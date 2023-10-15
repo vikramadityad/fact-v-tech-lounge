@@ -5,6 +5,7 @@ const path = require("path");
 const cors = require("cors");
 const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/db");
+
 // const { db } = require("./models/User");
 
 const PORT = process.env.PORT || 4000;

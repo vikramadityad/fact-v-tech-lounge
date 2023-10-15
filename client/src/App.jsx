@@ -6,8 +6,8 @@ import Hero from "./components/Hero";
 import Menu from "./components/Menu";
 import Events from "./components/Events";
 import About from "./components/About";
-// import Contact from "./components/Contact";
-// import Footer from "./components/Footer";
+import ContactUs from "./components/ContactUs";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 
@@ -56,16 +56,16 @@ function App() {
               />
             </div>
             <div ref={eventsRef} style={sectionStyle}>
-            <Events />
-          </div>
-           <div ref={aboutRef} style={sectionStyle}>
+              <Events />
+            </div>
+            <div ref={aboutRef} style={sectionStyle}>
               <About />
             </div>
-            {/* <div ref={contactRef} style={sectionStyle}>
-            <Contact />
-          </div> */}
+            <div ref={contactRef} style={sectionStyle}>
+              <ContactUs />
+            </div>
           </div>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>
