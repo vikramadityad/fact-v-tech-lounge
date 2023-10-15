@@ -5,10 +5,10 @@ import { setContext } from '@apollo/client/link/context';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
-// import Evenets from "./components/Evenets";
-// import About from "./components/About";
-// import Contact from "./components/Contact";
-// import Footer from "./components/Footer";
+import Events from "./components/Events";
+import About from "./components/About";
+import ContactUs from "./components/ContactUs";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 
@@ -72,17 +72,17 @@ function App() {
                 setCartItems={setCartItems}
               />
             </div>
-            {/* <div ref={eventsRef} style={sectionStyle}>
-            <Events />
+            <div ref={eventsRef} style={sectionStyle}>
+              <Events />
+            </div>
+            <div ref={aboutRef} style={sectionStyle}>
+              <About />
+            </div>
+            <div ref={contactRef} style={sectionStyle}>
+              <ContactUs />
+            </div>
           </div>
-          <div ref={aboutRef} style={sectionStyle}>
-            <About />
-          </div>
-          <div ref={contactRef} style={sectionStyle}>
-            <Contact />
-          </div> */}
-          </div>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>

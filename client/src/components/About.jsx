@@ -1,5 +1,4 @@
 import bodyImg from "../images/Hero-1.png";
-import AboutFooter from "./AboutFooter";
 import imageOne from "../images/Hero-3.png";
 import imageTwo from "../images/farrah.jpg";
 import imageThree from "../images/Hero-2.png";
@@ -8,7 +7,7 @@ import imageFive from "../images/aviad.jpg";
 import imageSix from "../images/vikram.jpg";
 import imageSeven from "../images/chris.jpg";
 import imageEight from "../images/terrence.jpg";
-import "./About.css";
+import "../styles/About.css";
 
 const imgArray = [
   imageOne,
@@ -63,7 +62,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      <AboutFooter />
     </div>
   );
 };
