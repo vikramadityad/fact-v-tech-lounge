@@ -2,6 +2,7 @@ const User = require("../models/User");
 const { signToken, AuthenticationError } = require("../utils/auth");
 const Menu = require("../models/Menu");
 const Event = require("../models/Event");
+const ContactForm = require("../models/ContactForm");
 
 const resolvers = {
   Query: {
