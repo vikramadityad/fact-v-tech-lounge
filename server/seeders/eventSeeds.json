@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Tech Conference",
+    "_id": "event1",
+    "image": "src/images/menu-images/student-bootcamp-platter.jpg",
+    "description": "An annual tech conference featuring keynote speakers and workshops on the latest tech trends.",
+    "fee": 100.0
+   
+  },
+  {
+    "name": "Hackathon",
+    "_id": "event2",
+    "image": "src/images/menu-images/student-bootcamp-platter.jpg",
+    "description": "A 24-hour hackathon where developers collaborate to build innovative solutions.",
+    "fee": 25.0
+    
+  },
+  {
+    "name": "AI Workshop",
+    "_id": "event3",
+    "image": "src/images/menu-images/student-bootcamp-platter.jpg",
+    "description": "A workshop on artificial intelligence and machine learning for tech enthusiasts.",
+    "fee": 20.0
+  },
+  {
+    "name": "Web Development Bootcamp",
+    "_id": "event4",
+    "image": "src/images/menu-images/student-bootcamp-platter.jpg",
+    "description": "A comprehensive bootcamp for aspiring web developers.",
+    "fee": 50.0
+  },
+  {
+    "name": "Cybersecurity Conference",
+    "_id": "event5",
+    "image": "src/images/menu-images/student-bootcamp-platter.jpg",
+    "description": "A conference focused on the latest trends and best practices in cybersecurity.",
+    "fee": 75.0
+  },
+  {
+    "name": "Data Science Symposium",
+    "_id": "event6",
+    "image": "src/images/menu-images/student-bootcamp-platter.jpg",
+    "description": "A symposium showcasing the latest advancements in data science and analytics.",
+    "fee": 30.0
+  }
+]
+

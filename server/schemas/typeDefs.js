@@ -21,11 +21,21 @@ const typeDefs = gql`
     includes: [String]!
     price: Float!
   }
+  
+  type Event {
+    _id: ID!
+    name: String!
+    image: String!
+    description: String!
+    fee: Float!
+  }
 
   type Query {
     getUser(name: String!): User
     menuItems: [Menu]!
     menuItem(menuId: ID!): Menu
+    events: [Event]!
+    event(eventId: ID!): Event
   }
 
   type Mutation {

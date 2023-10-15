@@ -18,7 +18,7 @@ const MenuItem = ({
       id: item._id,
       name: item.name,
       price: item.price,
-      imgUrl: item.imgUrl,
+      imgUrl: item.image,
       category: item.category,
     };
     setItemCounter(++itemCounter);
@@ -27,7 +27,7 @@ const MenuItem = ({
 
   return (
     <div className="menu-item">
-      <img src={item.imgUrl} alt={item.name} className="item-img" />
+      <img src={item.image} alt={item.name} className="item-img" />
       <span>{item.name}</span>
       <PrimaryButton
         label="Add to Cart"
