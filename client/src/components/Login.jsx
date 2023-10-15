@@ -1,8 +1,8 @@
-// Auth.jsx
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
 import '../styles/Login.css';
+import AuthService from '../utilities/auth';
 
 const LOGIN_USER = gql`
   mutation Login($email: String!, $password: String!) {
@@ -46,22 +46,36 @@ const Auth = ({ onClose }) => {
           variables: { email, password },
         });
 
-        // Handle login response
+     
         console.log('Login success:', data);
+
+        if (data && data.login && data.login.token) {
+  
+          AuthService.login(data.login.token);
+        } else {
+          console.error('No token received after login');
+        }
       } else {
         const { data } = await createUser({
           variables: { name, email, password },
         });
 
-        // Handle signup response
+
         console.log('Signup success:', data);
+
+        if (data && data.createUser && data.createUser.token) {
+
+          AuthService.login(data.createUser.token);
+        } else {
+          console.error('No token received after signup');
+        }
       }
 
-      // Close the modal
+
       onClose();
     } catch (error) {
       console.error('Authentication failed:', error.message);
-      // Handle authentication error, show a message to the user, etc.
+
     }
   };
 

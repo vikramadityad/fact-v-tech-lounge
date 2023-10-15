@@ -7,7 +7,7 @@ import CartButton from "./CartButton";
 // import CartButton from "./CartButton";
 import About from "./About";
 import Auth from "./Login";
-import MyAccount from "./MyAccount";
+import MyAccount from "./MyAccount"
 
 const Navbar = ({
   heroRef,

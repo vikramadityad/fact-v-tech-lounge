@@ -1,51 +1,44 @@
-const { GraphQLError } = require("graphql");
-const jwt = require("jsonwebtoken");
-require("dotenv").config();
+const { GraphQLError } = require('graphql');
+const jwt = require('jsonwebtoken');
 
-const secretKey = "mysecretssshhhhhhh";
-const expiration = "2h";
-
-const AuthenticationError = new GraphQLError(
-  "Authentication failed. User could not be authenticated.",
-  {
-    extensions: {
-      code: "UNAUTHENTICATED",
-    },
-  }
-);
-
-const authMiddleware = function ({ req }) {
-  console.log("Request Headers:", req.headers);
-  let token = req.body.token || req.query.token || req.headers.authorization;
-
-  if (req.headers.authorization) {
-    token = token.split(" ").pop().trim();
-  }
-
-  if (!token) {
-    console.log("No token found.");
-    return req;
-  }
-
-  try {
-    const { data } = jwt.verify(token, secretKey, { maxAge: expiration });
-    req.user = data;
-    console.log("Token verified. User data:", data);
-  } catch (error) {
-    console.error("Invalid token");
-    console.error("Invalid token. Error:", error);
-  }
-
-  return req;
-};
-
-const signToken = function ({ email, name, _id }) {
-  const payload = { email, name, _id };
-  return jwt.sign({ data: payload }, secretKey, { expiresIn: expiration });
-};
+const secret = 'mysecretssshhhhhhh';
+const expiration = '2h';
 
 module.exports = {
-  AuthenticationError,
-  authMiddleware,
-  signToken,
+  AuthenticationError: new GraphQLError('Could not authenticate user.', {
+    extensions: {
+      code: 'UNAUTHENTICATED',
+    },
+  }),
+  authMiddleware: function ({ req }) {
+    let token = req.body.token || req.query.token || req.headers.authorization;
+
+    console.log('Raw Authorization Header Value:', req.headers.authorization);
+
+    if (req.headers.authorization) {
+      token = token.split(' ').pop().trim();
+    }
+
+    console.log('Token in authMiddleware:', token);
+
+    if (!token) {
+      console.log('No token found.');
+      return req;
+    }
+
+    try {
+      const { data } = jwt.verify(token, secret, { maxAge: expiration });
+      req.user = data;
+      console.log("Token verified. User data:", data);
+    } catch (error) {
+      console.error("Invalid token");
+      console.error("Invalid token. Error:", error);
+    }
+
+    return req;
+  },
+  signToken: function ({ email, name, _id }) {
+    const payload = { email, name, _id };
+    return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+  },
 };
