@@ -6,6 +6,9 @@ import logo from "../images/logo-h.png";
 import CartButton from "./CartButton";
 // import CartButton from "./CartButton";
 import About from "./About";
+import Auth from "./Login";
+import MyAccount from "./MyAccount";
+
 const Navbar = ({
   heroRef,
   eventsRef,
@@ -18,6 +21,9 @@ const Navbar = ({
   setCartItems,
 }) => {
   const location = useLocation();
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isMyAccountModalOpen, setIsMyAccountModalOpen] = useState(false)
 
   // Dynamic navigation items
   const navItems = [
@@ -29,6 +35,22 @@ const Navbar = ({
 
   const isActive = (path) => {
     return location.pathname === path ? "active" : "";
+  };
+
+  const handleLoginClick = () => {
+    setIsLoginModalOpen(true);
+  };
+  const handleCloseLoginModal = () => {
+    setIsLoginModalOpen(false);
+    setIsLoggedIn(true);
+  };
+
+  const handleMyAccountClick = () => {
+    setIsMyAccountModalOpen(true);
+  };
+
+  const handleCloseMyAccountModal = () => {
+    setIsMyAccountModalOpen(false);
   };
 
   const handleContactClick = () => {
@@ -72,13 +94,34 @@ const Navbar = ({
               setCartItems={setCartItems}
             />
           </div>
-          <PrimaryButton
-            label="Contact Us"
-            action={handleContactClick}
-            type="btn-primary"
-          />
+          {isLoggedIn ? (
+            <PrimaryButton
+              label="My Account"
+              type="btn-secondary"
+              action={handleMyAccountClick}
+            />
+          ) : (
+            <PrimaryButton
+              label="Login"
+              action={handleLoginClick}
+              type="btn-secondary"
+            />
+          )}
         </div>
       </div>
+
+      {isMyAccountModalOpen && (
+        <div className="myaccount-modal">
+
+          <MyAccount onClose={handleCloseMyAccountModal} />
+        </div>
+      )}
+
+      {isLoginModalOpen && (
+        <div className="login-modal">
+          <Auth onClose={handleCloseLoginModal} />
+        </div>
+      )}
     </header>
   );
 };
