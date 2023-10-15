@@ -2,6 +2,7 @@ const User = require("../models/User");
 const { signToken, AuthenticationError } = require("../utils/auth");
 const Menu = require("../models/Menu");
 const Event = require("../models/Event");
+const ContactForm = require("../models/ContactForm");
 
 const resolvers = {
   Query: {
@@ -70,6 +71,15 @@ const resolvers = {
         return { token, user };
       } catch (error) {
         throw AuthenticationError;
+      }
+    },
+    addContactForm: async (_, { name, email, message }) => {
+      try {
+        const contactForm = new ContactForm({ name, email, message });
+        await contactForm.save();
+        return contactForm;
+      } catch (error) {
+        throw error;
       }
     },
   },
