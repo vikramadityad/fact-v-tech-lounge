@@ -1,0 +1,58 @@
+.myaccount-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .myaccount-tabs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .myaccount-tabs li {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+    border-radius: 5px;
+    user-select: none;
+  }
+  
+  .myaccount-tabs li:hover {
+    background-color: #ddd;
+  }
+  
+  /* .myaccount-content {
+  } for more styling later
+   */
+   
+  .myaccount-logout-btn,
+  .myaccount-close-btn {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .myaccount-logout-btn {
+    background-color: #ff6347;
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  .myaccount-logout-btn:hover {
+    background-color: #d64937;
+  }
+  
+  .myaccount-close-btn {
+    background-color: #ccc;
+    color: #000;
+  }
+  
+  .myaccount-close-btn:hover {
+    background-color: #bbb;
+  }
+  
