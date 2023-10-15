@@ -1,7 +1,8 @@
 const { GraphQLError } = require('graphql');
 const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
 
-const secret = 'mysecretssshhhhhhh';
+const secret = crypto.randomBytes(32).toString('hex');
 const expiration = '2h';
 
 module.exports = {
@@ -24,15 +25,6 @@ module.exports = {
     if (!token) {
       console.log('No token found.');
       return req;
-    }
-
-    try {
-      const { data } = jwt.verify(token, secret, { maxAge: expiration });
-      req.user = data;
-      console.log("Token verified. User data:", data);
-    } catch (error) {
-      console.error("Invalid token");
-      console.error("Invalid token. Error:", error);
     }
 
     return req;
