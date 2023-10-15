@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import PrimaryButton from "./PrimaryButton";
 import "../Styles/ContactUs.css";
-import axios from "axios";
+import { useMutation, gql } from "@apollo/client";
+
+const ADD_CONTACT_FORM = gql`
+  mutation AddContactForm($name: String!, $email: String!, $message: String!) {
+    addContactForm(name: $name, email: $email, message: $message) {
+      _id
+    }
+  }
+`;
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +17,8 @@ const ContactUs = () => {
     email: "",
     message: "",
   });
+
+  const [addContactForm] = useMutation(ADD_CONTACT_FORM);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -21,14 +31,14 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Send a POST request to your server
-      const response = await axios.post(
-        "http://localhost:4000/api/contactus",
-        formData
-      );
-
-      // Log server response
-      console.log("Form data submitted:", response.data);
+      const { data } = await addContactForm({
+        variables: {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+      });
+      console.log("Form data submitted:", data);
     } catch (error) {
       console.log("Error submitting form data:", error);
     }

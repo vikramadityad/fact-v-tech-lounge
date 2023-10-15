@@ -72,6 +72,15 @@ const resolvers = {
         throw AuthenticationError;
       }
     },
+    addContactForm: async (_, { name, email, message }) => {
+      try {
+        const contactForm = new ContactForm({ name, email, message });
+        await contactForm.save();
+        return contactForm;
+      } catch (error) {
+        throw error;
+      }
+    },
   },
 };
 
