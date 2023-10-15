@@ -17,7 +17,7 @@ const LOGIN_USER = gql`
 `;
 
 const CREATE_USER = gql`
-  mutation CreateUser($name: String!, $email: String!, $password: String!) {
+  mutation CcreateUser($name: String!, $email: String!, $password: String!) {
     createUser(name: $name, email: $email, password: $password) {
       token
       user {
@@ -75,6 +75,8 @@ const Auth = ({ onClose }) => {
       onClose();
     } catch (error) {
       console.error('Authentication failed:', error.message);
+      console.error('GraphQL Errors:', error.graphQLErrors);
+      console.error('Network Error:', error.networkError);
 
     }
   };
