@@ -24,17 +24,17 @@ const Hero = ({ eventsRef, contactRef }) => {
   return (
     <div className="hero">
       <div className="hero-content">
-        <h1>Tech lounge for all your needs and more!</h1>
+        {/* <h1>Tech lounge for all your needs and more!</h1> */}
         <h2></h2>
         <div className="hero-buttons">
-          {buttons.map((button, index) => (
+          {/* {buttons.map((button, index) => (
             <PrimaryButton
               key={index}
               label={button.label}
               action={button.action}
               type={button.type}
             />
-          ))}
+          ))} */}
         </div>
       </div>
       <div className="hero-photo">

@@ -1,7 +1,7 @@
 /* Navigation Main */
 .nav-main {
   background-color: var(--white);
-  padding: 1.5em 0;
+  padding: 0em 0;
   position: sticky;
   top: 0;
   box-shadow: 0 0 8px var(--primary-dark);
