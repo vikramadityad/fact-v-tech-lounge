@@ -44,11 +44,7 @@ function Events() {
         return (
           <div key={item._id} className="event_section">
             <div className="event-item">
-              <img
-                className="item-img"
-                src="src/images/menu-images/student-bootcamp-platter.jpg"
-                alt="Event Picture"
-              />
+              <img className="item-img" src={item.image} alt="Event Picture" />
               <h3>{item.name}</h3>
               <p>{item.description}</p>
               <div className="event-links">
