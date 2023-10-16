@@ -2,7 +2,7 @@
   {
     "name": "Tech Conference",
     "_id": "event1",
-    "image": "src/images/menu-images/student-bootcamp-platter.jpg",
+    "image": "src/images/event-images/techconference.jpg",
     "description": "An annual tech conference featuring keynote speakers and workshops on the latest tech trends.",
     "fee": 100.0
    
