@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/MyAccount.css';
 import AuthService from '../utilities/auth'
 import { useQuery } from '@apollo/client';
-import { GET_USER_PROFILE } from  '../queries/userQueries'
+import { GET_USER } from  '../queries/userQueries'
 
 
 // const userData = {
@@ -30,14 +30,19 @@ const loyaltyPointsData = {
 const MyAccount = ({ onClose }) => {
   const [activeTab, setActiveTab] = useState('profile');
   
-  const { loading, error, data } = useQuery(GET_USER_PROFILE, {
-    headers: {
-      Authorization: `Bearer ${AuthService.getToken()}`
+  const user = AuthService.getUser();
+
+  console.log('user from MyAccount:', user);
+  console.log('User name from Myaccount', user.data.name);
+  const { loading, error, data } = useQuery(GET_USER, {
+    variables: {
+      name: user.data.name,
     },
   });
 
   useEffect(() => {
     if (data && !error) {
+      console.log('Data:', data);
       setUserData({
         name: data.getUser.name,
         email: data.getUser.email,
