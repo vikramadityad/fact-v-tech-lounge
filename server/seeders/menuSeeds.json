@@ -1,7 +1,7 @@
 [
   {
     "name": "Student Boot Camp Platter",
-    "_id": "p01",
+    "_id": "price_1O1b3SGtO1FmclxamkHwD4Qu",
     "category": "platter",
     "image": "https://res.cloudinary.com/factv/image/upload/v1697411331/Images/student-bootcamp-platter_v5hlhx.jpg",
     "description": "This platter is designed to provide inspiration. Just like in coding, where every line of code matters, every ingredient in this platter serves a purpose.",
@@ -16,7 +16,7 @@
   },
   {
     "name": "Objects & Variables Platter",
-    "_id": "p02",
+    "_id": "price_1O1dd8GtO1Fmclxa1I5k80vW",
     "category": "platter",
     "image": "https://res.cloudinary.com/factv/image/upload/v1697411336/Images/objects-and-variables-platter_t3stwr.jpg",
     "description": " Just like the building blocks of code, each element on this platter has a distinct role and purpose, coming together to create a harmonious and flavorful experience.",

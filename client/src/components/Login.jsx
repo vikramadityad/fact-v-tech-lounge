@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
 import '../styles/Login.css';
+import '../styles/PrimaryButton.css';
 import AuthService from '../utilities/auth';
 
 const LOGIN_USER = gql`
@@ -28,7 +29,7 @@ const CREATE_USER = gql`
   }
 `;
 
-const Auth = ({ onClose }) => {
+const Auth = ({ onClose, onLogin}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -52,6 +53,8 @@ const Auth = ({ onClose }) => {
         if (data && data.login && data.login.token) {
   
           AuthService.login(data.login.token);
+          onLogin(true);
+          console.log('Auth component rendered')
         } else {
           console.error('No token received after login');
         }
@@ -69,6 +72,7 @@ const Auth = ({ onClose }) => {
         } else {
           console.error('No token received after signup');
         }
+        onLogin(true);
       }
 
 
@@ -78,6 +82,7 @@ const Auth = ({ onClose }) => {
       console.error('GraphQL Errors:', error.graphQLErrors);
       console.error('Network Error:', error.networkError);
 
+      onLogin(false);
     }
   };
 
@@ -118,13 +123,13 @@ const Auth = ({ onClose }) => {
             />
           </label>
           <br />
-          <button type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
+          <button className="btn btn-primary" type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
         </form>
         <p onClick={() => setIsLogin(!isLogin)}>
           {isLogin ? 'Need an account? Sign Up' : 'Already have an account? Login'}
         </p>
       </div>
-      <button className="close-button" onClick={onClose}>
+      <button className="btn btn-primary" onClick={onClose}>
         Close
       </button>
     </div>
