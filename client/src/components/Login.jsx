@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
 import '../styles/Login.css';
+import '../styles/PrimaryButton.css';
 import AuthService from '../utilities/auth';
 
 const LOGIN_USER = gql`
@@ -118,13 +119,13 @@ const Auth = ({ onClose }) => {
             />
           </label>
           <br />
-          <button type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
+          <button className="btn btn-primary" type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
         </form>
         <p onClick={() => setIsLogin(!isLogin)}>
           {isLogin ? 'Need an account? Sign Up' : 'Already have an account? Login'}
         </p>
       </div>
-      <button className="close-button" onClick={onClose}>
+      <button className="btn btn-primary" onClick={onClose}>
         Close
       </button>
     </div>
