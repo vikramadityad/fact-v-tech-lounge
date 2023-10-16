@@ -10,10 +10,10 @@ const Events = ({
   setCartItems,
 }) => {
   const [events, setEvents] = useState([]);
-  const [isButtonActive, setIsButtonActive] = useState(false);
+  const [isButtonActive, setIsButtonActive] = useState(null);
 
-  const handleButtonClick = () => {
-    setIsButtonActive(!isButtonActive);
+  const handleButtonClick = (eventId) => {
+    setIsButtonActive(isButtonActive === eventId ? null : eventId);
   };
 
 
@@ -73,11 +73,11 @@ const Events = ({
               <div className="event-links">
                 <PrimaryButton
                   label="Details"
-                  action={handleButtonClick}
+                  action= {() => handleButtonClick(item._id)}
                   type="btn-primary"
                 />
                 <dialog
-                  className={isButtonActive ? "event_popup" : "inactive-button"}
+                  className={isButtonActive === item._id ? "event_popup" : "inactive-button"}
                 >
                   <PrimaryButton
                     label="Close"
