@@ -42,7 +42,6 @@ const Navbar = ({
   };
   const handleCloseLoginModal = () => {
     setIsLoginModalOpen(false);
-    setIsLoggedIn(true);
   };
 
   const handleMyAccountClick = () => {
@@ -52,6 +51,11 @@ const Navbar = ({
   const handleCloseMyAccountModal = () => {
     setIsMyAccountModalOpen(false);
   };
+
+ const handleLoginStateUpdate = (loggedIn) => {
+  console.log('Is Logged in:', loggedIn);
+  setIsLoggedIn(loggedIn);
+ }
 
   const handleContactClick = () => {
     if (contactRef.current) {
@@ -119,7 +123,7 @@ const Navbar = ({
 
       {isLoginModalOpen && (
         <div className="login-modal">
-          <Auth onClose={handleCloseLoginModal} />
+          <Auth onClose={handleCloseLoginModal} onLogin={handleLoginStateUpdate} />
         </div>
       )}
     </header>
