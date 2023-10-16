@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/MyAccount.css';
+import AuthService from '../utilities/auth'
+import { useQuery } from '@apollo/client';
+import { GET_USER_PROFILE } from  '../queries/userQueries'
 
-const userData = {
-  name: 'your name',
-  email: 'your email',
-  contact: 'your phone #',
-};
+
+// const userData = {
+//   name: 'your name',
+//   email: 'your email',
+//   contact: 'your phone #',
+// };
 
 const orderHistoryData = [
   { orderId: '123', date: '2023-01-01', items: ['Objects & Variables Platter', 'Student Boot Camp Platter'], total: 25.99 },
@@ -25,6 +29,27 @@ const loyaltyPointsData = {
 
 const MyAccount = ({ onClose }) => {
   const [activeTab, setActiveTab] = useState('profile');
+  
+  const { loading, error, data } = useQuery(GET_USER_PROFILE, {
+    headers: {
+      Authorization: `Bearer ${AuthService.getToken()}`
+    },
+  });
+
+  useEffect(() => {
+    if (data && !error) {
+      setUserData({
+        name: data.getUser.name,
+        email: data.getUser.email,
+      });
+    }
+  }, [data, error]);
+
+  const [userData, setUserData] = useState({
+    name: 'Loading...',
+    email: 'Loading...',
+    contact: 'Loading...',
+  });
 
   const handleLogout = () => {
     localStorage.removeItem('authToken');
@@ -83,13 +108,20 @@ const MyAccount = ({ onClose }) => {
         return (
           <div>
             <h3>Profile Information</h3>
-            <p>Name: {userData.name}</p>
-            <p>Email: {userData.email}</p>
-            <p>Contact: {userData.contact}</p>
-          </div>
-        );
+            {userData && (
+        <>
+          <p>Name: {userData.name}</p>
+          <p>Email: {userData.email}</p>
+          <p>Contact: {userData.contact}</p>
+        </>
+      )}
+    </div>
+  );
     }
   };
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error fetching user profile</p>;
 
   return (
     <div className="myaccount-container">

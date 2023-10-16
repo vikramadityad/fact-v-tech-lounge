@@ -24,13 +24,15 @@ class AuthService {
   }
 
   // Store the token in localStorage
-  login(idToken) {
-    localStorage.setItem('id_token', idToken);
+  login(authToken, userData) {
+    localStorage.setItem('authToken', authToken);
+    localStorage.setItem('userData', JSON.stringify(userData));
   }
 
 
   logout() {
-    localStorage.removeItem('id_token');
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('userData');
   }
 }
 
