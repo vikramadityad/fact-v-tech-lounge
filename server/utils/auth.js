@@ -1,8 +1,10 @@
 const { GraphQLError } = require('graphql');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
+// require('dotenv').config();
 
 const secret = crypto.randomBytes(32).toString('hex');
+// const secret = process.env.secret
 const expiration = '2h';
 
 module.exports = {
@@ -14,16 +16,16 @@ module.exports = {
   authMiddleware: function ({ req }) {
     let token = req.body.token || req.query.token || req.headers.authorization;
 
-    console.log('Raw Authorization Header Value:', req.headers.authorization);
+    // console.log('Raw Authorization Header Value:', req.headers.authorization);
 
     if (req.headers.authorization) {
       token = token.split(' ').pop().trim();
     }
 
-    console.log('Token in authMiddleware:', token);
+    // console.log('Token in authMiddleware:', token);
 
     if (!token) {
-      console.log('No token found.');
+      // console.log('No token found.');
       return req;
     }
 

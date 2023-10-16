@@ -20,13 +20,15 @@ class AuthService {
 
   // Get the token from localStorage
   getToken() {
-    return localStorage.getItem('id_token');
+    return localStorage.getItem('authToken');
+    
   }
 
   // Store the token in localStorage
   login(authToken, userData) {
     localStorage.setItem('authToken', authToken);
     localStorage.setItem('userData', JSON.stringify(userData));
+    console.log('Token stored:', authToken);
   }
 
 
