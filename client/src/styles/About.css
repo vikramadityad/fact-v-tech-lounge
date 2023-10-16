@@ -19,6 +19,7 @@
 }
 .about_content {
   display: flex;
+
   margin: 50px 0 20px;
   align-items: center;
   box-shadow: 0 0 5px black;
@@ -28,6 +29,7 @@
   width: 60%;
   height: 400px;
   border-radius: 6px 0 0 6px;
+  object-fit: cover;
 }
 .about_content h3 {
   font-size: 1rem;
@@ -38,7 +40,7 @@
 .about_right_content {
   display: flex;
   flex-direction: column;
-  height: 400px;
+  max-height: 400px;
   align-items: center;
   padding: 0 25px;
   justify-content: space-around;
@@ -55,4 +57,22 @@
   height: 170px;
   padding: 10px;
   border-radius: 20px;
+}
+
+/* Media queries  */
+
+@media only screen and (max-width: 1188px) {
+  .about_content {
+    flex-direction: column;
+  }
+  .about_content img {
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+  }
+}
+
+@media only screen and (max-width: 678px) {
+  .about_sm_img {
+    justify-content: center;
+  }
 }
