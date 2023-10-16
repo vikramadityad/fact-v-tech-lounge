@@ -28,7 +28,7 @@ const CREATE_USER = gql`
   }
 `;
 
-const Auth = ({ onClose }) => {
+const Auth = ({ onClose, onLogin}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -52,6 +52,8 @@ const Auth = ({ onClose }) => {
         if (data && data.login && data.login.token) {
   
           AuthService.login(data.login.token);
+          onLogin(true);
+          console.log('Auth component rendered')
         } else {
           console.error('No token received after login');
         }
@@ -69,6 +71,7 @@ const Auth = ({ onClose }) => {
         } else {
           console.error('No token received after signup');
         }
+        onLogin(true);
       }
 
 
@@ -78,6 +81,7 @@ const Auth = ({ onClose }) => {
       console.error('GraphQL Errors:', error.graphQLErrors);
       console.error('Network Error:', error.networkError);
 
+      onLogin(false);
     }
   };
 
