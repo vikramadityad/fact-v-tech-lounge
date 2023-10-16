@@ -3,7 +3,7 @@
     "name": "Student Boot Camp Platter",
     "_id": "p01",
     "category": "platter",
-    "image": "src/images/menu-images/student-bootcamp-platter.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411331/Images/student-bootcamp-platter_v5hlhx.jpg",
     "description": "This platter is designed to provide inspiration. Just like in coding, where every line of code matters, every ingredient in this platter serves a purpose.",
     "includes": [
       "Algorithm Avocado Toast",
@@ -18,7 +18,7 @@
     "name": "Objects & Variables Platter",
     "_id": "p02",
     "category": "platter",
-    "image": "src/images/menu-images/objects-and-variables-platter.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411336/Images/objects-and-variables-platter_t3stwr.jpg",
     "description": " Just like the building blocks of code, each element on this platter has a distinct role and purpose, coming together to create a harmonious and flavorful experience.",
     "includes": [
       "HTML Hummus",
@@ -36,7 +36,7 @@
     "name": "Algorithm Avocado Toast",
     "_id": "a01",
     "category": "pwa",
-    "image": "src/images/menu-images/algorithm-avacado-toast.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411331/Images/algorithm-avocado-toast_ahd73x.jpg",
     "description": "Creamy, sliced avocados on whole-grain toast, topped with a sprinkle of sesame seeds and a drizzle of olive oil for that extra algorithmic crunch.",
     "price": "15"
   },
@@ -44,7 +44,7 @@
     "name": "Binary Bites",
     "_id": "a02",
     "category": "pwa",
-    "image": "src/images/menu-images/binary-bites.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411339/Images/binary-bites_piq8mn.jpg",
     "description": "A selection of crunchy, binary-inspired snacks such as pretzel sticks and pita chips served with a binary dip (made with a secret combination of 0s and 1s).",
     "price": "12"
   },
@@ -52,7 +52,7 @@
     "name": "Data Crunchers",
     "_id": "a03",
     "category": "pwa",
-    "image": "src/images/menu-images/data-crunchers.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411343/Images/data-crunchers_n9xcba.jpg",
     "description": "Grilled chicken, mixed with a data-driven blend of peppers, onions, and spices, wrapped in a tortilla, and served with a side of data sauce for that extra kick.",
     "price": "15"
   },
@@ -60,7 +60,7 @@
     "name": "HTML Hummus",
     "_id": "a04",
     "category": "pwa",
-    "image": "src/images/menu-images/html-hummus.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411345/Images/html-hummus_qr3e07.jpg",
     "description": "Creamy hummus served with an assortment of colorful, freshly sliced vegetables, including carrot sticks, cucumber, and bell peppers, ready to be encoded with your favorite flavors.",
     "price": "12"
   },
@@ -68,7 +68,7 @@
     "name": "CSS Chips & Style",
     "_id": "a05",
     "category": "pwa",
-    "image": "src/images/menu-images/css-chips-and-style.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411344/Images/css-chips-and-style_fmdlph.jpg",
     "description": "Crispy potato chips served with a variety of dipping sauces, representing the diverse styles and design choices that CSS (Cascading Style Sheets) can bring to web development.",
     "price": "16"
   },
@@ -76,7 +76,7 @@
     "name": "Ruby Roll-Ups",
     "_id": "a06",
     "category": "pwa",
-    "image": "src/images/menu-images/ruby-roll-ups.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411334/Images/ruby-roll-ups_saolsr.jpg",
     "description": "12 Sushi-style rolls filled with fresh vegetables and crab meat, wrapped in seaweed and rice, paying homage to Ruby, a language that values simplicity and productivity.",
     "price": "12"
   },
@@ -92,7 +92,7 @@
     "name": "HTML (hotter than my last) Wings",
     "_id": "a08",
     "category": "pwa",
-    "image": "src/images/menu-images/html-wings.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411346/Images/html-wings_frpbno.jpg",
     "description": "These wings are generously coated in a fiery CSS sauce, made with ghost peppers and habanero chili for a coding challenge for your taste buds.",
     "price": "16"
   },
@@ -100,7 +100,7 @@
     "name": "Git Pushers",
     "_id": "a09",
     "category": "pwa",
-    "image": "src/images/menu-images/git-pushers.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411342/Images/git-pushers_ferfsy.jpg",
     "description": "6 Mini Burger Sliders, a tech-inspired twist on a classic favorite. Where pushing your changes to a repository is a crucial step, these sliders push all the right buttons for your taste buds.",
     "price": "15"
   },
@@ -108,7 +108,7 @@
     "name": "Webpack Wings",
     "_id": "a10",
     "category": "pwa",
-    "image": "src/images/menu-images/webpack-wings.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411332/Images/webpack-wings_lcffoy.jpg",
     "description": "Tender chicken wings coated in a smoky barbecue sauce that represents the concept of bundling code, ensuring all the flavors meld together perfectly.",
     "price": "16"
   },
@@ -116,7 +116,7 @@
     "name": "Load Time Fries",
     "_id": "a11",
     "category": "pwa",
-    "image": "src/images/menu-images/load-time-fries.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411347/Images/load-time-fries_qmmubd.jpg",
     "description": "Crispy seasoned fries served with a side of Load Time ketchup, highlighting the importance of fast loading times in web development.",
     "price": "8"
   },
@@ -124,7 +124,7 @@
     "name": "Service Workers",
     "_id": "a12",
     "category": "pwa",
-    "image": "src/images/menu-images/service-workers.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411337/Images/service-workers_wqhves.jpg",
     "description": "A delightful and innovative take on the classic mozzarella sticks you know and love. They're crispy on the outside, oozing with cheesy goodness on the inside.",
     "price": "12"
   },
@@ -132,7 +132,7 @@
     "name": "Workbox Wings",
     "_id": "a13",
     "category": "pwa",
-    "image": "src/images/menu-images/workbox-wings.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411340/Images/workbox-wings_kqubwx.jpg",
     "description": "Crispy chicken wings with a zesty -Cache Crunch- dry rub, symbolizing the caching functionality of service workers, which stores and retrieves web assets for lightning-fast performance.",
     "price": "16"
   },
@@ -140,7 +140,7 @@
     "name": "Renders",
     "_id": "a14",
     "category": "pwa",
-    "image": "src/images/menu-images/renders.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411341/Images/renders_s5l9u7.jpg",
     "description": "Miniature potato wedges served in a stack, resembling lines of code, with each layer flavored differently, representing the compilation process of turning code into a functioning program.",
     "price": "12"
   },
@@ -148,7 +148,7 @@
     "name": "Syntax Salad",
     "_id": "a15",
     "category": "server",
-    "image": "src/images/menu-images/syntax-salad.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411338/Images/syntax-salad_ofeoke.jpg",
     "description": "A colorful mix of fresh greens, cherry tomatoes, and sliced cucumbers, served with a tangy syntax-check dressing, to ensure your code remains clean and error-free.",
     "price": "11"
   },
@@ -156,7 +156,7 @@
     "name": "CSS Salad",
     "_id": "a16",
     "category": "server",
-    "image": "src/images/menu-images/css-salad.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411335/Images/css-salad_wbzuff.jpg",
     "description": "Just as CSS brings style and structure to web pages, this salad combines a symphony of flavors, colors, and textures to create a visually appealing and delicious dining experience. This caesar style salad brings a blend of fresh and crisp lettuce leaves, toasted croutons, plump black olives that add a savory touchwith a creamy and tangy Caesar dressing that coats the lettuce leaves, topped with grated Parmesan cheese that adds a savory and slightly nutty taste",
     "price": "12"
   },
@@ -164,7 +164,7 @@
     "name": "Pseudo Salad",
     "_id": "a17",
     "category": "server",
-    "image": "src/images/menu-images/pseudo-salad.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411339/Images/pseudo-salad_avc2wa.jpg",
     "description": "This unique salad blurs the lines between appearance and reality, creating a delightful culinary illusion that surprises and intrigues. Get this: A bed of clear, gelatinous -lettuce- that mimics the appearance of greens but disappears upon contact, leaving behind a refreshing, herb-infused essence. Then there's the tiny crouton-shaped sugar sculptures with tomatoes that appear to be whole but, when bitten into, burst into a cool and tangy tomato-flavored foam, along with delicate, translucent edible flowers with a subtle floral flavor that dances on your taste buds! We top this off with a crystal-clear, color-shifting dressing that changes both its appearance and taste as you drizzle it over the salad, offering a symphony of flavors from sweet to spicy to tangy. Welcome to AI!",
     "price": "12"
   },
@@ -172,7 +172,7 @@
     "name": "Pixel Pickles",
     "_id": "a18",
     "category": "server",
-    "image": "src/images/menu-images/",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697411333/Images/pixel-pickles_f9cwmu.jpg",
     "description": "Crispy and colorful pickles that add a burst of texture and flavor to each bite, representing the pixel-level attention to detail in coding user interfaces.",
     "price": "12"
   },
