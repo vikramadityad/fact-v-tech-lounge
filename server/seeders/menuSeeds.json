@@ -84,7 +84,7 @@
     "name": "C++ Caramelized Onions",
     "_id": "a07",
     "category": "pwa",
-    "image": "src/images/menu-images/c-plus-plus-caramelized-onions.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697471604/Images/rffheiawllzfswny8swy.jpg",
     "description": "Sweet caramelized onions served on toasted bread, representing the complex and multifaceted nature of C++, a language used for a wide range of applications.",
     "price": "12"
   },
@@ -278,7 +278,7 @@
     "name": "Big Data Surf & Turf",
     "_id": "c03",
     "category": "client",
-    "image": "src/images/menu-images/big-data.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697471720/Images/big-data_raszqd.jpg",
     "description": "A Code-Driven Culinary Extravaganza! A generous portion of perfectly grilled steak, symbolizing the robustness and structure needed to manage big data, a succulent lobster tail that represents the richness and complexity of data, tender asparagus spears that highlight the importance of data-driven decision-making, red scallops that signify the structured nature of data in databases, with well-defined fields and relationships, topped with rich au jus sauce infused with complex flavors, symbolizing the algorithms used to process and extract valuable insights. Served with a side of creamy mashed potatoes and Sautéed haricot verts.",
     "price": "44"
   },

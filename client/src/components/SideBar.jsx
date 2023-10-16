@@ -24,7 +24,7 @@ const SideBar = ({
   //Fetch statement to post cart items to stripe database
   const checkout = async () => {
     console.log(cartItems);
-    await fetch("http://localhost:5173/checkout", {
+    await fetch("http://localhost:4000/checkout", {
       method: "POST",
       headers: {
         "Content-Type": "application/JSON",
@@ -33,6 +33,7 @@ const SideBar = ({
       body: JSON.stringify({ items: cartItems }),
     })
       .then((response) => {
+        console.log(response);
         return response.json();
       })
       .then((response) => {
