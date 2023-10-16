@@ -73,7 +73,13 @@ function App() {
               />
             </div>
             <div ref={eventsRef} style={sectionStyle}>
-              <Events />
+              <Events 
+               setItemCounter={setItemCounter}
+               itemCounter={itemCounter}
+               cartItems={cartItems}
+               setCartItems={setCartItems}
+               />
+              
             </div>
             <div ref={aboutRef} style={sectionStyle}>
               <About />

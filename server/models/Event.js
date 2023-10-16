@@ -18,15 +18,15 @@ const eventSchema = new Schema({
   fee: {
     type: Number,
   },
-  // date: {
-  //   type: String,
-  // },
-  // startTime: {
-  //   type: String, 
-  // },
-  // endTime: {
-  //   type: String, 
-  // },
+  date: {
+    type: String,
+  },
+  startTime: {
+    type: String, 
+  },
+  endTime: {
+    type: String, 
+  },
 });
 
 const Event = model('Event', eventSchema);
