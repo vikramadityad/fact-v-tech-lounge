@@ -181,7 +181,7 @@
     "name": "JavaScript Jambalaya",
     "_id": "s01",
     "category": "server",
-    "image": "src/images/menu-images/javascript-jumbalaya.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697456720/Images/javascript-jumbalaya_unfv6c.jpg",
     "description": " A flavorful jambalaya made with a medley of meats, vegetables, and spices, symbolizing the dynamic and versatile nature of JavaScript, the language that brings interactivity to the web. Served with a side of garlic bread.",
     "price": "16"
   },
@@ -189,7 +189,7 @@
     "name": "Python Pizza",
     "_id": "s02",
     "category": "server",
-    "image": "src/images/menu-images/python-pizza.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697456750/Images/python-pizza_qd2bdk.jpg",
     "description": "A personal nine inch classic pizza topped with a variety of fresh ingredients, reflecting the simplicity and elegance of Python, a programming language known for its readability and ease of use.",
     "price": "14"
   },
@@ -197,7 +197,7 @@
     "name": "Slack Burger",
     "_id": "s03",
     "category": "server",
-    "image": "src/images/menu-images/slack-burger.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697456776/Images/slack-burger_lcsp6o.jpg",
     "description": "A delicious tribute to the world of coding and collaboration, featuring a juicy Angus beef double patty, seasoned to perfection including layers of creamy cheddar and Swiss cheeses, crispy bacon strips, sliced tomato, crisp lettuce, tangy pickle with a hint of garlic with a zesty and vibrant relish sauce on a soft sesame seed bun that holds it all together, symbolizing the foundation of any great code project.",
     "price": "18"
   },
@@ -205,7 +205,7 @@
     "name": "Array Sandwich",
     "_id": "s04",
     "category": "server",
-    "image": "src/images/menu-images/array-sandwich.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697456807/Images/array-sandwich_yhcbuv.jpg",
     "description": "A Flavorful Concatenation: Thin slices of turkey, with layers of cheddar cheese, melted to creamy perfection and a colorful array of fresh lettuce, tomato, bell peppers, and red onions, topped off with a zesty dijon mustard dressing on a hearty focaccia bread that serves as the foundation of your sandwich, just like functions are the backbone of many programs.",
     "price": "17"
   },
@@ -213,7 +213,7 @@
     "name": "Fetch Wrap",
     "_id": "s05",
     "category": "server",
-    "image": "src/images/menu-images/fetch-wrap.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697456828/Images/fetch-wrap_fq7hpt.jpghttps://res.cloudinary.com/factv/image/upload/v1697456828/Images/fetch-wrap_fq7hpt.jpg",
     "description": " A culinary creation that pays tribute to the power of the Fetch API in modern web development. Tender strips of Angus steak, marinated to perfection with spicy jalapeños, creamy slices of avocado, crispy cucumber slices, crumbled feta cheese, roasted red bell peppers on a bed of fresh arugula leaves coated in our creamy ranch dressing with a hint of responsiveness, much like the need for responsive design in modern web applications.",
     "price": "18"
   },
@@ -221,7 +221,7 @@
     "name": "Sequelize Sandwich",
     "_id": "s06",
     "category": "server",
-    "image": "src/images/menu-images/sequelize-sandwich.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697456907/Images/sequelize-sandwich_vn0kaw.jpg",
     "description": "Just as Sequelize simplifies database interactions, this sandwich combines layers of flavors and textures to create a symphony for your taste buds. A sturdy Schema sourdough bread slice that forms the foundation of your sandwich combines a database of thin slices of deli-style turkey with model mozzarella, sun-dried tomatoes, with a creamy avocado spread on s bed of mixed greens with a drizzle of vinaigrette, representing the middleware that processes and manipulates data as it flows through your web application. ",
     "price": "18"
   },
@@ -229,7 +229,7 @@
     "name": "Mongo Burger",
     "_id": "s07",
     "category": "server",
-    "image": "src/images/menu-images/mongo-burger.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697456944/Images/mongo-burger_x7njsp.jpg",
     "description": "Just as MongoDB excels in handling vast amounts of data, this burger stacks three delicious patties to create a coding feast of flavors and textures. This masterpiece includes three juicy beef patties cooked to perfection, crispy pork belly strips that add a smoky crunch, melted jalapeño jack cheese infused with the spirit of JSON, thinly sliced red onions, sliced tomato, topped off with garlic dill pickle on a fresh baked sesame seed bun, representing the structured syntax that brings order to code. ",
     "price": "22"
   },
@@ -237,7 +237,7 @@
     "name": "React Burger",
     "_id": "s08",
     "category": "server",
-    "image": "src/images/menu-images/react-burger.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697456987/Images/react-burger_jrewkm.jpg",
     "description": "Just as React simplifies building user interfaces, this burger brings together a symphony of flavors and ingredients to create a harmonious and delicious experience. Featuring two succulent beef patties, symbolizing React's reusable and modular components, the building blocks of dynamic web interfaces paired with melted cheddar cheese, crisp lettuce, thinly sliced red onions, sliced tomato, sweet maple bacon, zesy pickles, with spicy jalapeño slices that add a kick to your burger, mirroring the JSX syntax used to write React components... all on a fresh baked brioche bun! ",
     "price": "20"
   },
@@ -245,7 +245,7 @@
     "name": "Weekly Wrap Up",
     "_id": "s09",
     "category": "server",
-    "image": "src/images/menu-images/weekly-wrap-up.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457053/Images/weekly-wrap-up_psrjzi.jpg",
     "description": "Just as you wrap up your weekly coding tasks, this wrap brings together a delightful array of flavors and ingredients in perfect harmony. Inside this wrap you will find tender, marinated chicken strips cooked to perfection, a flavorful rice pilaf with mixed vegetables, thinly sliced red onions, roasted bell peppers, black beans, fresh spinach, a creamy avocado dressing inside a soft, whole wheat tortilla that wraps up your coding journey.",
     "price": "18"
   },
@@ -253,7 +253,7 @@
     "name": "Coding Crunch Sandwich",
     "_id": "s10",
     "category": "server",
-    "image": "src/images/menu-images/coding-crunch-sandwich.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457111/Images/coding-crunch-sandwich_offhid.jpg",
     "description": " It's a sandwich designed to ignite your taste buds and celebrate the art of coding in every bite. Binary Brioche: Soft and toasted brioche buns, featuring binary code patterns as a playful nod to the digital world. Seasoned Chicken, avocado, lettuce, tomato, red onion, and bell peppers, bacon, with our famous Git Gouda Cheese",
     "price": "18"
   },
@@ -262,7 +262,7 @@
     "name": "Responsive Ribs",
     "_id": "c01",
     "category": "client",
-    "image": "src/images/menu-images/responsive-ribs.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457139/Images/responsive-ribs_muapyl.jpg",
     "description": "Just as responsive design adapts to different screen sizes, this dish combines a symphony of flavors and textures to create a memorable dining experience. A generous serving of slow-cooked, tender ribs that represent the hearty backbone of your meal, much like a well-structured website. A rich and savory Grid gravy, reminiscent of CSS Grid, which organizes content into responsive grids on webpages. A medley of fresh and colorful Media Query Vegetables that symbolize the importance of media queries in responsive design, adjusting content for different devices. A tangy Viewport Vinaigrette dressing drizzled over the vegetables, representing the viewport meta tag used in web development to control how web content is displayed on various devices. Served with crispy Flexbox Fries seasoned to perfection, symbolizing the flexibility and adaptability of CSS Flexbox, which simplifies layout design.",
     "price": "32"
   },
@@ -270,7 +270,7 @@
     "name": "Express Steak",
     "_id": "c02",
     "category": "client",
-    "image": "src/images/menu-images/express-steak.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457173/Images/express-steak_atybji.jpg",
     "description": "Just as Express.js simplifies server-side programming, it is a coding-themed culinary masterpiece that pays tribute to the speed and efficiency of the Express.js framework in web development. A premium cut of sirloin steak, cooked to perfection, symbolizing the robustness and backbone of your meal, much like Express.js serves as the backbone of server-side web applications, with RESTful sliced red onions with a hint of spice, Node.js Potatoes - golden roasted potatoes that highlight the synergy between Express.js and Node.js, and a side of Middleware Mixed Greens -  a  refreshing mixed greens salad served with a middleware-inspired dressing, symbolizing the middleware functions that enhance Express.js applications with additional features, along with Router Roma Tomatoes - sliced Roma tomatoes that add a burst of color to your dish, representing the routing capabilities of Express.js, which directs client requests to the appropriate server endpoints.",
     "price": "38"
   },
@@ -286,7 +286,7 @@
     "name": "State Steak",
     "_id": "c04",
     "category": "client",
-    "image": "src/images/menu-images/state-steak.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457280/Images/state-steak_oxjn0y.jpg",
     "description": "Whether you're a coding enthusiast or simply a lover of exquisite meals, State Steak will delight your senses. A perfectly grilled tenderloin steak, cooked to your desired level of doneness, served with creamy sweet potatoes prepared in a stateful manner, tender asparagus spears, a rich au jus sauce infused with complex flavors, and roasted carrots that showcase responsiveness.",
     "price": "38"
   },
@@ -294,7 +294,7 @@
     "name": "The Weekly Challenge",
     "_id": "c05",
     "category": "client",
-    "image": "src/images/menu-images/weekly-challenge.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457311/Images/weekly-challenge_azk0yf.jpg",
     "description": "Our signature main course is not just a meal; it's a culinary adventure that tests your taste buds and showcases the creativity of our kitchen. It is a portion of succulent grilled chicken, garlic roasted shrimp, and a portion of tender beef, (or flavorful vegetarian alternatives), providing the foundation of your dish, with a medley of international flavors and ingredients, ranging from exotic spices to diverse vegetables and herbs, creating a harmonious fusion on your plate. A secret signature sauce, specially crafted by our chefs adds an element of surprise and excitement to your dish along with seasonal ingredients and garnishes that change regularly to keep -The Weekly Challenge- fresh and exciting with every visit. ",
     "price": "48"
   },
@@ -302,7 +302,7 @@
     "name": "Vegan Code Garden Bowl",
     "_id": "c06",
     "category": "client",
-    "image": "src/images/menu-images/vegan-code-garden-bowl.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457352/Images/vegan-code-garden-bowl_kolcxk.jpg",
     "description": "A coding-themed culinary masterpiece that combines the principles of programming with the vibrant flavors of plant-based cuisine. This dish includes a colorful blend of brown and white rice, resembling binary code patterns, creamy slices of ripe avocado, cherry tomatoes, cucumber, bell peppers, and carrots, tender and vibrant green beans, crispy roasted chick peas, roasted sweet potato cubes, with a zesty and tangy vinaigrette dressing. Served with a side of whole-grain breadsticks, baked to perfection!",
     "price": "28"
   },
@@ -310,7 +310,7 @@
     "name": "Bug-Free Brownies",
     "_id": "d01",
     "category": "desert",
-    "image": "src/images/menu-images/bug-free-brownies.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457381/Images/bug-free-brownies_uqwgba.jpg",
     "description": "2 Moist and chewy brownies with a twist—each one comes with a small flag that you can use to mark your progress in debugging your code.",
     "price": "10"
   },
@@ -318,7 +318,7 @@
     "name": "Boolean Brownie",
     "_id": "d02",
     "category": "desert",
-    "image": "src/images/menu-images/boolean-brownie.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457470/Images/boolean-brownie_na9gmr.jpg",
     "description": "A large rich, fudgy brownie with two distinct flavors - one representing true and the other false, a playful nod to the logical constructs of Boolean variables in programming.",
     "price": "8"
   },
@@ -326,7 +326,7 @@
     "name": "API Apple Pie",
     "_id": "d03",
     "category": "desert",
-    "image": "src/images/menu-images/api-apple-pie.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457497/Images/api-apple-pie_rbq4ni.jpg",
     "description": "Our API Apple Pie is a delectable dessert that combines the comforting flavors of a classic apple pie with a coding twist. Served warm, it features a lattice crust that resembles a network of APIs, and each slice is a delightful fusion of sweet apples and flaky pastry. A scoop of vanilla ice cream on top completes this tech-inspired treat.",
     "price": "9"
   },
@@ -334,7 +334,7 @@
     "name": "Git-Commit Mousse",
     "_id": "d04",
     "category": "desert",
-    "image": "src/images/menu-images/git-commit-mousse.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457522/Images/git-commit-mousse_k34vkk.jpg",
     "description": "The Git-Commit Chocolate Mousse is a dessert that will satisfy your chocolate cravings while paying homage to version control. Enjoy a rich and velvety chocolate mousse served in a mini jar, with a chocolate -commit- button on top.",
     "price": "8"
   },
@@ -342,7 +342,7 @@
     "name": "Byte-by-Byte Ice Cream Sundae",
     "_id": "d05",
     "category": "desert",
-    "image": "src/images/menu-images/byte-by-byte-sundae.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457549/Images/byte-by-byte-sundae_g4c8nn.jpg",
     "description": "Your own coding-inspired sundae! Vanilla, Strawberry, and chocolate ice cream, sprinkled in Debugging Delights and crumbled Boolean Brownies, topped with caramel sauce. Your dessert will be a sweet coding adventure.",
     "price": "11"
   },
@@ -350,7 +350,7 @@
     "name": "SQL Raspberry Parfait",
     "_id": "d06",
     "category": "desert",
-    "image": "src/images/menu-images/sql-raspberry-parfait.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457582/Images/sql-raspberry-parfait_xprvxh.jpg",
     "description": "A layered dessert with creamy vanilla yogurt, fresh raspberries, and granola, presented in a glass to resemble an SQL database table structure.",
     "price": "10"
   },
@@ -359,7 +359,7 @@
     "name": "JavaScript Jolt Smoothie",
     "_id": "na01",
     "category": "drink",
-    "image": "src/images/menu-images/javascript-jolt-smoothie.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457622/Images/javascript-jolt-smoothie_urhfdj.jpg",
     "description": "A smoothie bursting with the energy of JavaScript, blending bananas, berries, yogurt, and a hint of caffeine for those moments when you need a coding jolt.",
     "price": "9"
   },
@@ -367,7 +367,7 @@
     "name": "Java Jolt",
     "_id": "na02",
     "category": "drink",
-    "image": "src/images/menu-images/java-jolt.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457653/Images/java-jolt_vxdjul.jpg",
     "description": "A bold, brewed coffee that provides the caffeine kick needed for those long coding sessions, reminding us of the power and efficiency of Java.",
     "price": "5"
   },
@@ -375,7 +375,7 @@
     "name": "Byte-Size Espresso",
     "_id": "na03",
     "category": "drink",
-    "image": "src/images/menu-images/byte-size-espresso.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457686/Images/byte-size-espresso_ec2sin.jpg",
     "description": "Byte-Size Espresso is sure to awaken your senses. We roast our coffee beans to perfection, ensuring a responsive flavor profile that adapts to your palate with each sip. A velvety and thick layer of crema on top of your espresso, symbolizing the smooth execution of well-written code.",
     "price": "5"
   },
@@ -383,7 +383,7 @@
     "name": "Debugging Dazzler",
     "_id": "na04",
     "category": "drink",
-    "image": "src/images/menu-images/debugging-dazzler.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457732/Images/debugging-dazzler_rg1h6b.jpg",
     "description": "A mixed berry mocktail with a sparkling twist, served in a glass with LED light-up ice cubes to represent the debugging process in coding.",
     "price": "7"
   },
@@ -392,7 +392,7 @@
     "name": "Binary Bourbon Bliss",
     "_id": "al01",
     "category": "drink",
-    "image": "src/images/menu-images/binary-bourbon-bliss.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457757/Images/binary-bourbon-bliss_zi3bqa.jpg",
     "description": "A smooth bourbon-based cocktail with a touch of sweetness, garnished with a cherry and a binary code-stenciled orange peel twist.",
     "price": "12"
   },
@@ -400,7 +400,7 @@
     "name": "Java Jolt Martini",
     "_id": "al02",
     "category": "drink",
-    "image": "src/images/menu-images/java-jolt-martini.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457780/Images/java-jolt-martini_xtcfhh.jpg",
     "description": "A Java-inspired martini made with coffee liqueur, vodka, and a splash of cream, served in a chilled glass with a chocolate rim.",
     "price": "11"
   },
@@ -408,7 +408,7 @@
     "name": "HTML Highball",
     "_id": "al03",
     "category": "drink",
-    "image": "src/images/menu-images/html-highball.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457811/Images/html-highball_fvhwlh.jpg",
     "description": "A highball cocktail featuring whiskey, ginger ale, and a hint of bitters, garnished with a lemon wheel and a small HTML tag-shaped garnish.",
     "price": "12"
   },
@@ -416,7 +416,7 @@
     "name": "CSS Spritz Sipper",
     "_id": "al04",
     "category": "drink",
-    "image": "src/images/menu-images/css-spritz-sipper.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457845/Images/css-spritz-sipper_wi4s9u.jpg",
     "description": "A light and bubbly cocktail made with prosecco, Aperol, and a splash of soda, garnished with an orange twist and a CSS-inspired cocktail stirrer.",
     "price": "12"
   },
@@ -424,7 +424,7 @@
     "name": "Jungle Juice Div",
     "_id": "al05",
     "category": "drink",
-    "image": "src/images/menu-images/jungle-juice-div.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457883/Images/jungle-juice-div_uy7xck.jpg",
     "description": "A fruity and tropical jungle juice cocktail with a blend of rum, fruit juices, and a splash of grenadine, garnished with a pineapple slice and a JavaScript code swirl.",
     "price": "14"
   },
@@ -432,7 +432,7 @@
     "name": "Python Punch",
     "_id": "al06",
     "category": "drink",
-    "image": "src/images/menu-images/python-punch.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457906/Images/python-punch_ytsdt8.jpg",
     "description": "A punch bowl filled with a Python-themed tropical punch, featuring rum, coconut cream, and pineapple juice.",
     "price": "14"
   },
@@ -440,7 +440,7 @@
     "name": "Responsive Raspberry Refresher",
     "_id": "al07",
     "category": "drink",
-    "image": "src/images/menu-images/responsive-raspberry-refresher.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457932/Images/responsive-raspberry-refresher_mlgfa5.jpg",
     "description": "A raspberry-infused gin and tonic with a hint of lime and mint, served in a tall glass with raspberry ice cubes and a responsive web design-inspired garnish.",
     "price": "12"
   },
@@ -448,7 +448,7 @@
     "name": "Data-Driven Daiquiri",
     "_id": "al08",
     "category": "drink",
-    "image": "src/images/menu-images/data-driven-daiquiri.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457968/Images/data-driven-daiquiri_zky9hw.jpg",
     "description": "A classic daiquiri with a data-driven twist, made with rum, lime juice, and a splash of simple syrup, served with a lime wheel and a data visualization garnish.",
     "price": "12"
   },
@@ -456,7 +456,7 @@
     "name": "Debugging Delight",
     "_id": "al09",
     "category": "drink",
-    "image": "src/images/menu-images/debugging-delight.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697457994/Images/debugging-delight_saq0yv.jpg",
     "description": "A sparkling cocktail made with gin, elderflower liqueur, and a splash of sparkling wine, garnished with an LED-lighted ice cube.",
     "price": "13"
   },
@@ -464,7 +464,7 @@
     "name": "Bit-Byte Breeze",
     "_id": "al10",
     "category": "drink",
-    "image": "src/images/menu-images/bit-byte-breeze.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697458020/Images/bit-byte-breeze_teszjn.jpg",
     "description": "A refreshing and citrusy vodka-based cocktail with a mix of lemon and lime juices, served in a glass with a rim of crushed bits (sugar) and a lemon wheel.",
     "price": "10"
   },
@@ -472,7 +472,7 @@
     "name": "Day.js Nightcap",
     "_id": "al11",
     "category": "drink",
-    "image": "src/images/menu-images/dayjs-nightcap.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697458046/Images/dayjs-nightcap_fju2xe.jpg",
     "description": "A rich coffee liqueur with a dash of tonic bitters to bring balance and depth to the cocktail, and a sweet and syrupy concoction infused with Day.js-inspired flavors, offering a touch of date sweetness and a hint of time-based complexity.",
     "price": "12"
   },
@@ -480,7 +480,7 @@
     "name": "Node Nectar",
     "_id": "al12",
     "category": "drink",
-    "image": "src/images/menu-images/node-nectar.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697458071/Images/node-nectar_ck0kvm.jpg",
     "description": "A smooth and botanical gin base with a sweet and fruity plum liqueur, fresh muddled mint leaves, and an orange syntax twist garnish.",
     "price": "12"
   },
@@ -488,7 +488,7 @@
     "name": "OOP On the Rocks",
     "_id": "al13",
     "category": "drink",
-    "image": "src/images/menu-images/oop-on-the-rocks.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697458101/Images/oop-on-the-rocks_zpye0m.jpg",
     "description": "A base of premium cognac, symbolizing the class and elegance of well-defined classes in Object-Oriented Programming, with a splash of amaretto liqueur, and few drops of orange bitters.",
     "price": "14"
   },
@@ -496,7 +496,7 @@
     "name": "MySQL Mule",
     "_id": "al14",
     "category": "drink",
-    "image": "src/images/menu-images/mysql-mule.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697458132/Images/mysql-mule_wzs5tx.jpg",
     "description": "A base of premium moonshine with freshly squeezed lime juice, a generous pour of spicy ginger beer, a homemade syrup infused with vanilla and cinnamon, and a cinnamon stick used both as a garnish and a stirrer, reminiscent of the concise and elegant syntax often found in SQL queries.",
     "price": "14"
   },
@@ -504,7 +504,7 @@
     "name": "The Bootstrap",
     "_id": "al15",
     "category": "drink",
-    "image": "src/images/menu-images/the-bootstrap.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697458160/Images/the-bootstrap_cg8agy.jpg",
     "description": "A base of premium white rum with a burst of fresh pineapple juice, a splash of creamy coconut cream and a lime twist garnish, reminiscent of the iconic glyphicons and icons that Bootstrap offers, providing a citrusy and aromatic touch.",
     "price": "12"
   },
@@ -512,7 +512,7 @@
     "name": "Terminal Twist",
     "_id": "al16",
     "category": "drink",
-    "image": "src/images/menu-images/terminal-twist.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697458184/Images/terminal-twist_hxma40.jpg",
     "description": "A base of premium vodka, symbolizing the clarity and precision of coding commands issued through the terminal with a house-made sour mix infused with lemon and lime, a splash of elderflower liqueur, and a few drops of aromatic bitters, reminiscent of the debugging process in coding, adding depth and complexity to the cocktail.",
     "price": "11"
   },
@@ -520,7 +520,7 @@
     "name": "MVC Microbrew",
     "_id": "al17",
     "category": "drink",
-    "image": "src/images/menu-images/mvc-microbrew.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697458214/Images/mvc-microbrew_jo2jcu.jpg",
     "description": "A foundation of well-balanced malt, symbolizing the Model; a blend of aromatic hops, representing the View; and a carefully selected yeast strain that controls fermentation, mirroring the Controller's role in managing data flow, ensuring a smooth and consistent fermentation process.",
     "price": "8"
   },
@@ -528,7 +528,7 @@
     "name": "Mongoose Pale Ale",
     "_id": "al18",
     "category": "drink",
-    "image": "src/images/menu-images/mongoose-pale-ale.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697458250/Images/mongoose-pale-ale_wiaiq6.jpg",
     "description": "Mongoose Pale Ale boasts a medium body with a well-structured balance of malt sweetness and hoppy bitterness, offering a complex yet approachable flavor profile.",
     "price": "8"
   },
@@ -536,7 +536,7 @@
     "name": "CodeCraft IPA",
     "_id": "al19",
     "category": "drink",
-    "image": "src/images/menu-images/codecraft-ipa.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697458300/Images/codecraft-ipa_jztxwu.jpg",
     "description": "Our CodeCraft IPA is a coding-themed beer that celebrates the art of crafting code while embracing the craft of brewing with a combination of carefully selected malts.",
     "price": "8"
   },
@@ -544,7 +544,7 @@
     "name": "Project 3 Porter",
     "_id": "al20",
     "category": "drink",
-    "image": "src/images/menu-images/project-3-porter.jpg",
+    "image": "https://res.cloudinary.com/factv/image/upload/v1697458331/Images/project-3-porter_wq4hmc.jpg",
     "description": "Project 3 Porter boasts a full-bodied complexity with a harmonious balance between malt sweetness and hop bitterness, providing a layered and rewarding flavor experience.",
     "price": "9"
   }

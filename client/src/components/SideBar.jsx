@@ -20,22 +20,26 @@ const SideBar = ({
     setCartItems(updatedCart); // Update cartItems state
   };
 
-
+  console.log(cartItems);
   //Fetch statement to post cart items to stripe database
   const checkout = async () => {
-    await fetch('http://localhost:4000/checkout', {
+    console.log(cartItems);
+    await fetch("http://localhost:5173/checkout", {
       method: "POST",
       headers: {
-        'Content-Type': 'application/JSON'
-      }, 
-      body: JSON.stringify({items: cartItems.items})
-    }).then((response) => {
-      return response.json();
-    }).then((response) => {
-      if(response.url) {
-        window.location.assign(response.url); //forwards user over to stripe payment
-      }
+        "Content-Type": "application/JSON",
+      },
+
+      body: JSON.stringify({ items: cartItems }),
     })
+      .then((response) => {
+        return response.json();
+      })
+      .then((response) => {
+        if (response.url) {
+          window.location.assign(response.url); //forwards user over to stripe payment
+        }
+      });
   };
 
   return (
@@ -60,7 +64,9 @@ const SideBar = ({
         <h2>Total: </h2>
         <h2>{formatCurrency(total)}</h2>
       </div>
-      <button className="sidebar_purchase" onClick={checkout}>Purchase</button>
+      <button className="sidebar_purchase" onClick={checkout}>
+        Purchase
+      </button>
     </div>
   );
 };
