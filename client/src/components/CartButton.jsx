@@ -8,15 +8,19 @@ const CartButton = ({
   setItemCounter,
   cartItems,
   setCartItems,
-  fakeCheckout,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [purchaseComplete, setPurchaseComplete] = useState(false);
+  const [thankYou, setThankYou] = useState("Cart Empty");
 
   const cartBtnHandler = () => {
     if (!isOpen) {
       setIsOpen(true);
+      setThankYou("Cart Empty");
     }
   };
+
+  //Closes Cart
   const closeCart = () => {
     setIsOpen(false);
     console.log("clicked");
@@ -79,11 +83,20 @@ const CartButton = ({
               itemCounter={itemCounter}
               setCartItems={setCartItems}
               removeCartItem={removeCartItem}
+              setPurchaseComplete={setPurchaseComplete}
+              setThankYou={setThankYou}
             />
           ) : (
             <h2 style={{ textAlign: "center", marginTop: "50px" }}>
-              Cart Empty
+              {thankYou}
             </h2>
+          )}
+          {purchaseComplete === false ? (
+            ""
+          ) : (
+            <span style={{ fontSize: "1.5rem", marginTop: "60px" }}>
+              Thank you for your purchase!
+            </span>
           )}
         </Offcanvas.Body>
       </Offcanvas>
