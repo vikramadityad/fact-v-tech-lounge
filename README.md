@@ -11,6 +11,7 @@ As a tech enthusiast and frequent visitor to the Tech Lounge, I want to effortle
 - [Technical Skills](#technical-skills)
 - [Acknowledgements](#acknowledgements)
 - [Deployment](#deployment)
+- [Deployment Resources](#deployment-resources)
 - [Screenshots](#screenshots)
 
 ## Installation
@@ -23,6 +24,7 @@ As a tech enthusiast and frequent visitor to the Tech Lounge, I want to effortle
 2. Install Dependencies npm install
 3. npm start
 4. Open http://localhost:3000 to view the app in your browser
+
 
 ## Dependencies
  FACT-V Lounge relies on the following dependencies
@@ -82,6 +84,22 @@ Repository: https://github.com/vikramadityad/fact-v-tech-lounge
 
 [View Our App Live!](https://fact-v-tech-lounge-client-f58d96d137e5.herokuapp.com/)
 
+## Deployment Resources
+To deploy the application to Heroku, the following resources were used:
+
+
+* [To Deploy both server and client seperately on heroku](https://medium.com/karolis-stulgys/deploy-client-and-server-code-to-heroku-from-a-single-git-repo-44c5b65da10a)
+
+* [Heroku buildpack to support from subdirectory](https://medium.com/@timanovsky/heroku-buildpack-to-support-deployment-from-subdirectory-e743c2c838dd)
+
+* [Buildpack](https://github.com/timanovsky/subdir-heroku-buildpack)
+
+* [Deploying a client and server code to heroku from a single git repo](https://medium.com/karolis-stulgys/deploy-client-and-server-code-to-heroku-from-a-single-git-repo-44c5b65da10a)
+
+* [Heroku buildpack to support depoloyment from subdirectory](https://medium.com/karolis-stulgys/deploy-client-and-server-code-to-heroku-from-a-single-git-repo-44c5b65da10a)
+
+* [Indebth guide for buildpack support from subdirectory](https://github.com/timanovsky/subdir-heroku-buildpack)
+
 ## Screenshots
 
 ### 1. Homepage
@@ -104,4 +122,3 @@ Repository: https://github.com/vikramadityad/fact-v-tech-lounge
 
 ### 7. Mobile Responsiveness
 <img src="client\src\images\READWEB7.png" alt="Mobile Responsiveness" width="500">
-
