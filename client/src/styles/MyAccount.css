@@ -2,45 +2,47 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .myaccount-tabs {
   list-style: none;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
 .myaccount-tabs li {
   cursor: pointer;
-  padding: 10px 15px;
-  background-color: #f0f0f0;
-  margin-right: 10px;
-  border-radius: 5px;
+  padding: 12px 18px;
+  background-color: #f4f4f4;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
   user-select: none;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .myaccount-tabs li:hover {
-  background-color: #ddd;
+  background-color: #e0e0e0;
 }
-
-/* .myaccount-content {
-  } for more styling later
-   */
 
 .myaccount-logout-btn,
 .myaccount-close-btn {
   cursor: pointer;
-  padding: 10px 15px;
+  padding: 12px 18px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   margin-top: 20px;
 }
 
 .myaccount-logout-btn {
   background-color: #ff6347;
   color: #fff;
-  margin-right: 10px;
+  margin-right: 12px;
 }
 
 .myaccount-logout-btn:hover {
@@ -54,4 +56,23 @@
 
 .myaccount-close-btn:hover {
   background-color: #bbb;
+}
+
+@media only screen and (max-width: 600px) {
+  .myaccount-container {
+    padding: 15px;
+  }
+
+  .myaccount-tabs li {
+    display: flex;
+    padding: 10px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: calc(50% - 11px);
+  }
+
+  .myaccount-logout-btn,
+  .myaccount-close-btn {
+    padding: 10px 15px;
+  }
 }
