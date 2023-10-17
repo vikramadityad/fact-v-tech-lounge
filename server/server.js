@@ -83,7 +83,7 @@ app.post("/checkout", async (req, res) => {
 console.log('allowing cors from ', allowedOrigins);
 app.use(
   cors({
-    origin: '*',
+    origin: allowedOrigins,
     credentials: true,
   })
 );
