@@ -3,6 +3,8 @@ import formatCurrency from "../utilities/formatCurrency";
 import { useState } from "react";
 
 const SideBar = ({
+  //deconstructure props
+
   cartItems,
   setCartItems,
   setItemCounter,
@@ -23,9 +25,9 @@ const SideBar = ({
     setCartItems(updatedCart); // Update cartItems state
   };
 
+  // if anything in cart thank user for purchase and set timeer to reset cart and verify order has been processed
   const fakeCheckout = () => {
     if (cartItems.length >= 0) {
-      console.log(cartItems);
       setPurchaseComplete(true);
       setTimeout(() => {
         setPurchaseComplete(false);
@@ -36,29 +38,7 @@ const SideBar = ({
     }
   };
 
-  // console.log(cartItems);
-  //Fetch statement to post cart items to stripe database
-  // const checkout = async () => {
-  //   console.log(cartItems);
-  //   await fetch("http://localhost:4000/checkout", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/JSON",
-  //     },
-
-  //     body: JSON.stringify({ items: cartItems }),
-  //   })
-  //     .then((response) => {
-  //       console.log(response);
-  //       return response.json();
-  //     })
-  //     .then((response) => {
-  //       if (response.url) {
-  //         window.location.assign(response.url); //forwards user over to stripe payment
-  //       }
-  //     });
-  // };
-
+  // Return items in cart
   return (
     <div className="sidebar">
       {cartItems.map((i) => (
@@ -77,6 +57,7 @@ const SideBar = ({
         </div>
       ))}
 
+      {/* //total price and puchase button */}
       <div className="sidebar_total">
         <h2>Total: </h2>
         <h2>{formatCurrency(total)}</h2>
