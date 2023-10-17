@@ -138,7 +138,6 @@ const Navbar = ({
             ) : (
               <PrimaryButton
                 label="Login"
-                id="loginbtn"
                 action={handleLoginClick}
                 type="btn-secondary"
               />

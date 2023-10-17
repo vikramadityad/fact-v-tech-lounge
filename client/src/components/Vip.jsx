@@ -41,7 +41,7 @@ const vipMembership = () => {
                 networking. <span style={{fontWeight:'bold'}}>SUBSCRIBE TODAY</span> and upgrade your nights out with the <em>future of 
                 entertainment</em>.</p>
 
-                 <button class='subscribe'><a href="https://buy.stripe.com/test_dR6g2I4A2cKcaWs3cd">Subscribe</a></button>
+                 <button className='subscribe'><a href="https://buy.stripe.com/test_dR6g2I4A2cKcaWs3cd">Subscribe</a></button>
                  <hr></hr>
                  </div>
         

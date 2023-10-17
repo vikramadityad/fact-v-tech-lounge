@@ -94,3 +94,9 @@
     margin: 15px;
   }
 }
+
+.about_right_content {
+  margin-top: 15px;
+  max-height: 650px;
+
+}

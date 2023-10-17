@@ -20,7 +20,7 @@ const resolvers = {
         return menuItems;
       } catch (error) {
         console.error("Error fetching menu items:", error);
-        throw error; // Rethrow the error
+        throw error;
       }
     },
     menuItem: async (parent, { menuId }) => {
@@ -32,7 +32,7 @@ const resolvers = {
         return events;
       } catch (error) {
         console.error("Error fetching events:", error);
-        throw error; // Rethrow the error
+        throw error;
       }
     },
     event: async (parent, { eventId }) => {
@@ -54,6 +54,36 @@ const resolvers = {
         const token = signToken(user);
         console.log("Generated Token:", token);
         return { token, user };
+      } catch (error) {
+        throw error;
+      }
+    },
+
+    resetPassword: async (_, { email, password }, context) => {
+      const user = await User.findOne({ email });
+    
+      if (!user) {
+        throw new Error('User not found');
+      }
+    
+      user.password = password;
+      await user.save();
+    
+      return {
+        message: 'Password reset successfully',
+        success: true,
+      };
+    },
+
+    deleteUser: async (_, { userId }) => {
+      try {
+        const user = await User.findByIdAndDelete(userId);
+
+        if (!user) {
+          throw new Error("User not found");
+        }
+
+        return { message: "User deleted successfully" };
       } catch (error) {
         throw error;
       }

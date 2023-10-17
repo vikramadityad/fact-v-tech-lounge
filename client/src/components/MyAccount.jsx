@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/MyAccount.css';
 import AuthService from '../utilities/auth'
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { GET_USER } from  '../queries/userQueries'
+import { DELETE_USER } from '../mutations/userMutations'
 
 
 // const userData = {
@@ -61,6 +62,29 @@ const MyAccount = ({ onClose }) => {
     window.location.reload();
   };
 
+// Delete Account function
+  const [deleteUserMutation] = useMutation(DELETE_USER);
+  const handleDeleteAccount = async () => {
+    const isConfirmed = window.confirm("Are you sure you want to delete your account?");
+    if (isConfirmed) {
+      try {
+        const userId = AuthService.getUserId();
+        const result = await deleteUserMutation({
+          variables: {
+            userId: user.data._id,
+          },
+        });
+        console.log(result);
+        console.log(result.data.deleteUser.message);
+        handleLogout();
+      } catch (error) {
+        console.error('Error deleting account:', error.message);
+        console.log('Detailed error:', error);
+      }
+    }
+  };
+  
+
   const renderTabContent = () => {
     switch (activeTab) {
       case 'orderHistory':
@@ -117,7 +141,6 @@ const MyAccount = ({ onClose }) => {
         <>
           <p>Name: {userData.name}</p>
           <p>Email: {userData.email}</p>
-          <p>Contact: {userData.contact}</p>
         </>
       )}
     </div>
@@ -140,6 +163,9 @@ const MyAccount = ({ onClose }) => {
 
       <div className="myaccount-content">{renderTabContent()}</div>
 
+      <button className="myaccount-delete-btn" onClick={handleDeleteAccount}>
+        Delete Account
+      </button>
       <button className="myaccount-logout-btn" onClick={handleLogout}>
         Logout
       </button>

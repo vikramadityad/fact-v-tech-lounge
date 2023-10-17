@@ -29,52 +29,67 @@ const CREATE_USER = gql`
   }
 `;
 
+const RESET_PASSWORD = gql`
+  mutation ResetPassword($email: String!, $password: String!) {
+    resetPassword(email: $email, password: $password) {
+      message
+    }
+  }
+`;
+
 const Auth = ({ onClose, onLogin}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
   const [isLogin, setIsLogin] = useState(true);
+  const [showResetPassword, setShowResetPassword] = useState(false)
 
   const [loginUser] = useMutation(LOGIN_USER);
   const [createUser] = useMutation(CREATE_USER);
+  const [resetPassword] = useMutation(RESET_PASSWORD);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      if (isLogin) {
+      if (showResetPassword) {
+        // Handle resetting password with a new password
+        const { data } = await resetPassword({
+          variables: { email, password: newPassword },
+        });
+
+        console.log('Reset password success:', data);
+      } else if (isLogin) {
+        // Handle login
         const { data } = await loginUser({
           variables: { email, password },
         });
 
-     
         console.log('Login success:', data);
 
         if (data && data.login && data.login.token) {
-  
           AuthService.login(data.login.token);
           onLogin(true);
-          console.log('Auth component rendered')
+          console.log('Auth component rendered');
         } else {
           console.error('No token received after login');
         }
       } else {
+        // Handle sign up
         const { data } = await createUser({
           variables: { name, email, password },
         });
 
-
         console.log('Signup success:', data);
 
         if (data && data.createUser && data.createUser.token) {
-
           AuthService.login(data.createUser.token);
         } else {
           console.error('No token received after signup');
         }
         onLogin(true);
       }
-
 
       onClose();
     } catch (error) {
@@ -86,12 +101,37 @@ const Auth = ({ onClose, onLogin}) => {
     }
   };
 
+  const renderResetPasswordForm = () => (
+    <div>
+      <label>
+        Email:
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+      </label>
+      <br />
+      <label>
+        New Password:
+        <input
+          type="password"
+          value={newPassword}
+          onChange={(e) => setNewPassword(e.target.value)}
+          required
+        />
+      </label>
+      <br />
+    </div>
+  );
+
   return (
     <div className="auth-container">
       <div className="auth-content">
-        <h2>{isLogin ? 'Login' : 'Sign Up'}</h2>
+        <h2>{showResetPassword ? 'Reset Password' : isLogin ? 'Login' : 'Sign Up'}</h2>
         <form onSubmit={handleSubmit}>
-          {!isLogin && (
+          {!isLogin && !showResetPassword && (
             <label>
               Name:
               <input
@@ -103,31 +143,43 @@ const Auth = ({ onClose, onLogin}) => {
             </label>
           )}
           <br />
-          <label>
-            Email:
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </label>
+          {!showResetPassword && (
+            <label>
+              Email:
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </label>
+          )}
           <br />
-          <label>
-            Password:
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </label>
+          {!showResetPassword && (
+            <label>
+              Password:
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </label>
+          )}
           <br />
-          <button className="btn btn-primary" type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
+          <button className="btn btn-primary" type="submit">
+            {showResetPassword ? 'Reset Password' : isLogin ? 'Login' : 'Sign Up'}
+          </button>
         </form>
-        <p onClick={() => setIsLogin(!isLogin)}>
-          {isLogin ? 'Need an account? Sign Up' : 'Already have an account? Login'}
-        </p>
+        {!showResetPassword && (
+          <p onClick={() => setIsLogin(!isLogin)}>
+            {isLogin ? 'Need an account? Sign Up' : 'Already have an account? Login'}
+          </p>
+        )}
+        {!showResetPassword && (
+          <p onClick={() => setShowResetPassword(true)}>Forgot Password?</p>
+        )}
+        {showResetPassword && renderResetPasswordForm()}
       </div>
       <button className="close-button" onClick={onClose}>
         &times;
