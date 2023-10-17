@@ -28,7 +28,7 @@ const CartButton = ({
   //Closes Cart
   const closeCart = () => {
     setIsOpen(false);
-    console.log("clicked");
+    // console.log("clicked");
   };
 
   // Function to remove an item from the cart

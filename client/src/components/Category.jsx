@@ -10,7 +10,7 @@ const Category = ({
   setCartItems,
 }) => {
   const [isActive, setIsActive] = useState(false);
-  console.log(items);
+  // console.log(items);
 
   const toggleIsActive = () => {
     setIsActive(!isActive);

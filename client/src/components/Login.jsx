@@ -59,21 +59,21 @@ const Auth = ({ onClose, onLogin}) => {
           variables: { email, password: newPassword },
         });
 
-        console.log('Reset password success:', data);
+        // console.log('Reset password success:', data);
       } else if (isLogin) {
         // Handle login
         const { data } = await loginUser({
           variables: { email, password },
         });
 
-        console.log('Login success:', data);
+        // console.log('Login success:', data);
 
         if (data && data.login && data.login.token) {
           AuthService.login(data.login.token);
           onLogin(true);
-          console.log('Auth component rendered');
+          // console.log('Auth component rendered');
         } else {
-          console.error('No token received after login');
+          // console.error('No token received after login');
         }
       } else {
         // Handle sign up
@@ -81,21 +81,21 @@ const Auth = ({ onClose, onLogin}) => {
           variables: { name, email, password },
         });
 
-        console.log('Signup success:', data);
+        // console.log('Signup success:', data);
 
         if (data && data.createUser && data.createUser.token) {
           AuthService.login(data.createUser.token);
         } else {
-          console.error('No token received after signup');
+          // console.error('No token received after signup');
         }
         onLogin(true);
       }
 
       onClose();
     } catch (error) {
-      console.error('Authentication failed:', error.message);
-      console.error('GraphQL Errors:', error.graphQLErrors);
-      console.error('Network Error:', error.networkError);
+      // console.error('Authentication failed:', error.message);
+      // console.error('GraphQL Errors:', error.graphQLErrors);
+      // console.error('Network Error:', error.networkError);
 
       onLogin(false);
     }

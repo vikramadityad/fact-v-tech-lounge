@@ -27,13 +27,13 @@ const Menu = ({ itemCounter, setItemCounter, cartItems, setCartItems }) => {
 
   // Use effect to set menu items when data is fetched
   useEffect(() => {
-    console.log(data);
+    // console.log(data);
     if (data) {
       setMenuItems(data.menuItems);
-      console.log(menuItems);
+      // console.log(menuItems);
     }
   }, [data]);
-  console.log(menuItems);
+  // console.log(menuItems);
 
   // Loading and error handling
   if (loading) return <p>Loading...</p>;

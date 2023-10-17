@@ -35,14 +35,14 @@ const Events = ({
   const { loading, error, data } = useQuery(GET_EVENTS);
 
   useEffect(() => {
-    console.log("events1", data);
+    // console.log("events1", data);
     if (data) {
       setEvents(data.events);
       console.log("eveinner", events);
     }
   }, [data]);
-  console.log("eve", events);
-  console.log('cartItems', cartItems)
+  // console.log("eve", events);
+  // console.log('cartItems', cartItems)
   const addToCart = (item) => {
     // If needed logic to handle adding the item to the cart (after we will check Strip integration)
     console.log(
