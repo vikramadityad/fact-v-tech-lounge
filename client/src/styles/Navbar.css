@@ -15,8 +15,7 @@
   margin: 0 auto;
   padding: 0 1.5em;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
 }
 
 /* Logo */
@@ -92,11 +91,9 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    position: fixed;
-    top: 20px;
-    right: 20px;
     z-index: 999;
-    margin-right: 15px;
+    margin-right: 5px;
+    margin-top: 15px;
   }
 
   .navbar-links {
@@ -142,6 +139,10 @@
     text-decoration: none;
     font-size: 1.2rem;
     color: inherit;
+  }
+
+  .navbar-links.open.flex {
+    display: flex;
   }
 
   .header-left {

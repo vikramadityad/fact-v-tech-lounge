@@ -70,6 +70,11 @@ function App() {
             cartItems={cartItems}
             setCartItems={setCartItems}
           />
+
+          <Routes>
+            <Route path="confirmation" element={<Confirmation />} />
+          </Routes>
+
           <div className="center-content">
             <div ref={heroRef} style={sectionStyle}>
               <Hero menuRef={menuRef} contactRef={contactRef} />
