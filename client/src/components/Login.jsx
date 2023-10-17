@@ -129,8 +129,8 @@ const Auth = ({ onClose, onLogin}) => {
           {isLogin ? 'Need an account? Sign Up' : 'Already have an account? Login'}
         </p>
       </div>
-      <button className="btn btn-primary" onClick={onClose}>
-        Close
+      <button className="close-button" onClick={onClose}>
+        &times;
       </button>
     </div>
   );

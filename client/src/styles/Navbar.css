@@ -15,7 +15,7 @@
   margin: 0 auto;
   padding: 0 1.5em;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -24,7 +24,30 @@
   max-width: 12.5em;
 }
 
-/* Navigation Links */
+.hamburger-menu {
+  display: none;
+}
+
+.bar {
+  background-color: var(--primary-dark);
+  height: 3px;
+  width: 25px;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.hamburger-menu.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 .navbar-links {
   display: flex;
   justify-content: flex-end;
@@ -33,6 +56,7 @@
 
 .navbar-links ul {
   list-style: none;
+  align-items: center;
   margin: 0;
   padding: 0;
   display: flex;
@@ -54,7 +78,87 @@
   color: var(--secondary-highlight);
 }
 
-/* Active Link Styling */
 .active {
   border-bottom: 2px solid var(--secondary-highlight);
 }
+
+/* .header-left {
+  flex: 1;
+  text-align: center;
+} */
+
+@media only screen and (max-width: 600px) {
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    margin-right: 15px;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--white);
+    width: 100%;
+    z-index: 998;
+  }
+
+  .navbar-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background-color: var(--white);
+    width: 100%;
+    z-index: 998;
+  }
+
+  .navbar-links.open ul {
+    list-style: none;
+    flex-direction: column;
+    padding: 0;
+    margin: 10;
+    text-align: center;
+  }
+
+  .navbar-links.open ul li {
+    padding: 1em;
+    border-bottom: 1px solid var(--primary-dark);
+    width: 300%;
+  }
+
+  .navbar-links.open ul li:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-links.open ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: inherit;
+  }
+  
+  .header-left {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .navbar-links.open.flex {
+    display: flex;
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+  }

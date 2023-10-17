@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import PrimaryButton from "./PrimaryButton";
-import "../styles/Navbar.css";
-import logo from "../images/logo-h.png";
 import CartButton from "./CartButton";
-// import CartButton from "./CartButton";
-import About from "./About";
 import Auth from "./Login";
-import MyAccount from "./MyAccount"
+import MyAccount from "./MyAccount";
+import logo from "../images/logo-h.png";
+import "../styles/Navbar.css";
 
 const Navbar = ({
   heroRef,
@@ -23,9 +21,9 @@ const Navbar = ({
   const location = useLocation();
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isMyAccountModalOpen, setIsMyAccountModalOpen] = useState(false)
+  const [isMyAccountModalOpen, setIsMyAccountModalOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Dynamic navigation items
   const navItems = [
     { name: "Home", path: "/", ref: heroRef },
     { name: "Menu", path: "/menu", ref: menuRef },
@@ -39,35 +37,59 @@ const Navbar = ({
 
   const handleLoginClick = () => {
     setIsLoginModalOpen(true);
+    closeMenu();
   };
+
   const handleCloseLoginModal = () => {
     setIsLoginModalOpen(false);
   };
 
   const handleMyAccountClick = () => {
     setIsMyAccountModalOpen(true);
+    closeMenu();
   };
 
   const handleCloseMyAccountModal = () => {
     setIsMyAccountModalOpen(false);
   };
 
- const handleLoginStateUpdate = (loggedIn) => {
-  console.log('Is Logged in:', loggedIn);
-  setIsLoggedIn(loggedIn);
- }
+  const handleLoginStateUpdate = (loggedIn) => {
+    setIsLoggedIn(loggedIn);
+  };
 
   const handleContactClick = () => {
     if (contactRef.current) {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
+      closeMenu();
     }
   };
 
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
+      closeMenu();
     }
   };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      closeMenu();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <header className="nav-main" role="banner">
@@ -77,7 +99,16 @@ const Navbar = ({
             <img src={logo} alt="logo" className="navbar-logo" />
           </Link>
         </div>
-        <nav className="navbar-links" role="navigation">
+
+        {/* Hamburger Menu Icon */}
+        <div className="hamburger-menu" onClick={toggleMenu}>
+          <div className={`bar ${isMenuOpen ? "open" : ""}`} />
+          <div className={`bar ${isMenuOpen ? "open" : ""}`} />
+          <div className={`bar ${isMenuOpen ? "open" : ""}`} />
+        </div>
+
+        {/* Navigation Links */}
+        <nav className={`navbar-links ${isMenuOpen ? "open" : ""}`} role="navigation">
           <ul>
             {navItems.map((item, index) => (
               <li key={index} className={isActive(item.path)}>
@@ -87,40 +118,43 @@ const Navbar = ({
               </li>
             ))}
           </ul>
-        </nav>
 
-        <div className="header-right" style={{ display: "flex" }}>
-          <div>
-            <CartButton
-              itemCounter={itemCounter}
-              setItemCounter={setItemCounter}
-              cartItems={cartItems}
-              setCartItems={setCartItems}
-            />
+          {/* Right-side Buttons */}
+          <div className="header-right" style={{ display: "flex" }}>
+            <div>
+              <CartButton
+                itemCounter={itemCounter}
+                setItemCounter={setItemCounter}
+                cartItems={cartItems}
+                setCartItems={setCartItems}
+              />
+            </div>
+            {isLoggedIn ? (
+              <PrimaryButton
+                label="My Account"
+                type="btn-secondary"
+                action={handleMyAccountClick}
+              />
+            ) : (
+              <PrimaryButton
+                label="Login"
+                id="loginbtn"
+                action={handleLoginClick}
+                type="btn-secondary"
+              />
+            )}
           </div>
-          {isLoggedIn ? (
-            <PrimaryButton
-              label="My Account"
-              type="btn-secondary"
-              action={handleMyAccountClick}
-            />
-          ) : (
-            <PrimaryButton
-              label="Login"
-              action={handleLoginClick}
-              type="btn-secondary"
-            />
-          )}
-        </div>
+        </nav>
       </div>
 
+      {/* Modal for My Account */}
       {isMyAccountModalOpen && (
         <div className="myaccount-modal">
-
           <MyAccount onClose={handleCloseMyAccountModal} />
         </div>
       )}
 
+      {/* Modal for Login */}
       {isLoginModalOpen && (
         <div className="login-modal">
           <Auth onClose={handleCloseLoginModal} onLogin={handleLoginStateUpdate} />
