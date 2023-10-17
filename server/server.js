@@ -30,6 +30,8 @@ const server = new ApolloServer({
   context: authMiddleware,
 });
 
+
+
 // Define the allowed origin(s)
 const allowedOrigins = [ process.env.CLIENT_URL || "http://localhost:5173" ];
 
@@ -78,7 +80,7 @@ app.post("/checkout", async (req, res) => {
     })
   );
 });
-
+console.log('allowing cors from ', allowedOrigins);
 app.use(
   cors({
     origin: allowedOrigins,

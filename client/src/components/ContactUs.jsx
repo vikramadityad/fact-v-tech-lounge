@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PrimaryButton from "./PrimaryButton";
-import "../Styles/ContactUs.css";
+import "../styles/ContactUs.css";
 import { useMutation, gql } from "@apollo/client";
 
 const ADD_CONTACT_FORM = gql`
