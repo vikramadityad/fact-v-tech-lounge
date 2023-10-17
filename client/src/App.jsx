@@ -7,6 +7,8 @@ import Hero from "./components/Hero";
 import Menu from "./components/Menu";
 import Events from "./components/Events";
 import About from "./components/About";
+import Vip from "./components/Vip";
+import VipImage from "./components/VipImage";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -41,6 +43,8 @@ function App() {
   const menuRef = useRef(null);
   const eventsRef = useRef(null);
   const aboutRef = useRef(null);
+  const vipRef = useRef(null);
+  const vipImageRef = useRef(null);
   const contactRef = useRef(null);
   const sectionStyle = { marginBottom: "8em" };
 
@@ -54,6 +58,8 @@ function App() {
             menuRef={menuRef}
             eventsRef={eventsRef}
             aboutRef={aboutRef}
+            vipImageRef={vipImageRef}
+            vipRef={vipRef}
             contactRef={contactRef}
             itemCounter={itemCounter}
             setItemCounter={setItemCounter}
@@ -73,10 +79,22 @@ function App() {
               />
             </div>
             <div ref={eventsRef} style={sectionStyle}>
-              <Events />
+              <Events 
+               setItemCounter={setItemCounter}
+               itemCounter={itemCounter}
+               cartItems={cartItems}
+               setCartItems={setCartItems}
+               />
+              
             </div>
             <div ref={aboutRef} style={sectionStyle}>
               <About />
+            </div>
+            <div ref={vipRef} style={sectionStyle}>
+              <Vip />
+            </div>
+            <div ref={vipImageRef} style={sectionStyle}>
+              <VipImage />
             </div>
             <div ref={contactRef} style={sectionStyle}>
               <ContactUs />

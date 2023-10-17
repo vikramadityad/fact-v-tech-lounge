@@ -10,8 +10,8 @@
 
 /* Each category section */
 .menu-section {
-  width: 100%;
-  margin-bottom: 1.5em;
+  width: 90em;
+  margin: 0 auto 1.5em;
 }
 
 /* Category header */
@@ -34,26 +34,34 @@
 
 /* Active state of menu items */
 .menu-items.active {
-  max-height: 100svh;
+  max-height: 100%;
   transition: max-height 0.8s ease;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Individual menu item */
 .menu-item {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  height: 450px;
   align-items: center;
-  background-color: var(--white-accent);
-  padding: 0.5em 1em;
-  border-radius: 0.25em;
-  width: 100%;
+  /* background-color: var(--white-accent); */
+  box-shadow: 0 0 8px black;
+  padding-bottom: 15px;
+  border-radius: 15px;
+  width: 20%;
+  margin: 25px;
+  /* font-size: 1.1rem; */
+  font-weight: 500;
 }
 
 /* Item image */
 .item-img {
-  width: 350px;
-  height: 350px;
+  width: 100%;
   object-fit: cover;
-  margin-right: 1.5em;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 0 8px black;
 }

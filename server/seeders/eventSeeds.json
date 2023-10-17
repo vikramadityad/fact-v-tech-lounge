@@ -4,41 +4,59 @@
     "_id": "event1",
     "image": "https://res.cloudinary.com/factv/image/upload/v1697461485/Images/aboutImg_qco3k7.jpg",
     "description": "An annual tech conference featuring keynote speakers and workshops on the latest tech trends.",
-    "fee": 100.0
+    "fee": 100.0,
+    "date": "2023-11-15",
+    "startTime": "09:00 AM",
+    "endTime": "05:00 PM"
   },
   {
     "name": "Hackathon",
     "_id": "event2",
     "image": "https://res.cloudinary.com/factv/image/upload/v1697461570/Images/desola-lanre-ologun-IgUR1iX0mqM-unsplash_mnaplr.jpg",
     "description": "A 24-hour hackathon where developers collaborate to build innovative solutions.",
-    "fee": 25.0
+    "fee": 25.0,
+    "date": "2023-12-05",
+    "startTime": "10:00 AM",
+    "endTime": "10:00 AM"
   },
   {
     "name": "AI Workshop",
     "_id": "event3",
     "image": "https://res.cloudinary.com/factv/image/upload/v1697461758/Images/bao-tran-bX9TE7XUR7Y-unsplash_fiokki.jpg",
     "description": "A workshop on artificial intelligence and machine learning for tech enthusiasts.",
-    "fee": 20.0
+    "fee": 20.0,
+    "date": "2023-10-20",
+    "startTime": "02:30 PM",
+    "endTime": "04:30 PM"
   },
   {
     "name": "Web Development Bootcamp",
     "_id": "event4",
     "image": "https://res.cloudinary.com/factv/image/upload/v1697461813/Images/nik-73_kRzs9sqo-unsplash_rzqezl.jpg",
     "description": "A comprehensive bootcamp for aspiring web developers.",
-    "fee": 50.0
+    "fee": 50.0,
+    "date": "2024-01-10",
+    "startTime": "09:30 AM",
+    "endTime": "04:30 PM"
   },
   {
     "name": "Cybersecurity Conference",
     "_id": "event5",
     "image": "https://res.cloudinary.com/factv/image/upload/v1697461957/Images/anthony-da-cruz-b4dNhklLF7I-unsplash_olplyx.jpg",
     "description": "A conference focused on the latest trends and best practices in cybersecurity.",
-    "fee": 75.0
+    "fee": 75.0,
+    "date": "2024-03-18",
+    "startTime": "08:00 AM",
+    "endTime": "05:00 PM"
   },
   {
     "name": "Data Science Symposium",
     "_id": "event6",
     "image": "https://res.cloudinary.com/factv/image/upload/v1697461865/Images/brooke-cagle-g1Kr4Ozfoac-unsplash_caz9l2.jpg",
     "description": "A symposium showcasing the latest advancements in data science and analytics.",
-    "fee": 30.0
+    "fee": 30.0,
+    "date": "2024-02-15",
+    "startTime": "10:00 AM",
+    "endTime": "03:30 PM"
   }
 ]

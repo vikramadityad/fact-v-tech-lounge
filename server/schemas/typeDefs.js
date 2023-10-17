@@ -28,6 +28,9 @@ const typeDefs = gql`
     image: String!
     description: String!
     fee: Float!
+    date: String!
+    startTime: String!
+    endTime: String!
   }
 
   type ContactForm {
