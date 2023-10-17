@@ -64,43 +64,45 @@ const Events = ({
     <section>
       <h1 className="event_header"> Upcoming Events </h1>
       <div className="event_section">
-      {events.map((item) => {
-        return (
+        {events.map((item) => {
+          return (
             <div key={item._id} className="event-item">
               <img className="item-img" src={item.image} alt="Event Picture" />
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
-              <div className="event-links">
-                <PrimaryButton
-                  label="Details"
-                  action= {() => handleButtonClick(item._id)}
-                  type="btn-primary"
-                />
-                <dialog
-                  className={isButtonActive === item._id ? "event_popup" : "inactive-button"}
-                >
+              <div className="event-content">
+                <h3>{item.name}</h3>
+                <p>{item.description}</p>
+                <div className="event-links">
                   <PrimaryButton
-                    label="Close"
-                    action={handleButtonClick}
+                    label="Details"
+                    action={() => handleButtonClick(item._id)}
                     type="btn-primary"
                   />
-                  <h3>{item.name}</h3>
-                  <p>Description: {item.description}</p>
-                  <p> Fee: $ {item.fee} </p>
-                  <p> When: {item.date} from {item.startTime} to {item.endTime}</p>
-                  <PrimaryButton
-                    className="reg_btn"
-                    label="Register"
-                    action={addToCart.bind(this, item)}
-                    type="btn-primary"
-                  />
-                </dialog>
-                {/* <button href="/" target="_blank" rel="noopener noreferrer">Register</button> */}
+                  <dialog
+                    className={isButtonActive === item._id ? "event_popup" : "inactive-button"}
+                  >
+                    <PrimaryButton
+                      label="Close"
+                      action={handleButtonClick}
+                      type="btn-primary"
+                    />
+                    <h3>{item.name}</h3>
+                    <p>Description: {item.description}</p>
+                    <p> Fee: $ {item.fee} </p>
+                    <p> When: {item.date} from {item.startTime} to {item.endTime}</p>
+                    <PrimaryButton
+                      className="reg_btn"
+                      label="Register"
+                      action={addToCart.bind(this, item)}
+                      type="btn-primary"
+                    />
+                  </dialog>
+                  {/* <button href="/" target="_blank" rel="noopener noreferrer">Register</button> */}
+                </div>
+                </div>
               </div>
-            </div>
-          );
+              );
       })}
-      </div>
+            </div>
     </section>
   );
 }
