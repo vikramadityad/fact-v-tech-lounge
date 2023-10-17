@@ -16,6 +16,7 @@
   padding: 0 1.5em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* Logo */
@@ -86,14 +87,14 @@
   text-align: center;
 } */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 885px) {
   .hamburger-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
     z-index: 999;
     margin-right: 5px;
-    margin-top: 15px;
+    margin-top: -150px;
   }
 
   .navbar-links {

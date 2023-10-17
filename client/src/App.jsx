@@ -71,9 +71,9 @@ function App() {
             setCartItems={setCartItems}
           />
 
-          <Routes>
+          {/* <Routes>
             <Route path="confirmation" element={<Confirmation />} />
-          </Routes>
+          </Routes> */}
 
           <div className="center-content">
             <div ref={heroRef} style={sectionStyle}>
@@ -106,9 +106,9 @@ function App() {
               <VipImage />
             </div>
 
-            <Routes>
+            {/* <Routes>
               <Route path="confirmation" element={<Confirmation />} />
-            </Routes>
+            </Routes> */}
 
             <div ref={contactRef} style={sectionStyle}>
               <ContactUs />

@@ -9,6 +9,7 @@ const SideBar = ({
   itemCounter,
   removeCartItem,
 }) => {
+  const [purchaseComplete, setPurchaseComplete] = useState(false);
   //get total price of items in cart
 
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
@@ -20,28 +21,35 @@ const SideBar = ({
     setCartItems(updatedCart); // Update cartItems state
   };
 
-  console.log(cartItems);
-  //Fetch statement to post cart items to stripe database
-  const checkout = async () => {
-    console.log(cartItems);
-    await fetch("http://localhost:4000/checkout", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/JSON",
-      },
-
-      body: JSON.stringify({ items: cartItems }),
-    })
-      .then((response) => {
-        console.log(response);
-        return response.json();
-      })
-      .then((response) => {
-        if (response.url) {
-          window.location.assign(response.url); //forwards user over to stripe payment
-        }
-      });
+  const fakeCheckout = () => {
+    if (cartItems.length > 0) {
+      console.log(cartItems);
+      setPurchaseComplete(true);
+    } else console.log("no cart items");
   };
+
+  // console.log(cartItems);
+  //Fetch statement to post cart items to stripe database
+  // const checkout = async () => {
+  //   console.log(cartItems);
+  //   await fetch("http://localhost:4000/checkout", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/JSON",
+  //     },
+
+  //     body: JSON.stringify({ items: cartItems }),
+  //   })
+  //     .then((response) => {
+  //       console.log(response);
+  //       return response.json();
+  //     })
+  //     .then((response) => {
+  //       if (response.url) {
+  //         window.location.assign(response.url); //forwards user over to stripe payment
+  //       }
+  //     });
+  // };
 
   return (
     <div className="sidebar">
@@ -65,7 +73,7 @@ const SideBar = ({
         <h2>Total: </h2>
         <h2>{formatCurrency(total)}</h2>
       </div>
-      <button className="sidebar_purchase" onClick={checkout}>
+      <button className="sidebar_purchase" onClick={fakeCheckout}>
         Purchase
       </button>
     </div>
