@@ -127,6 +127,7 @@
   }
 
   .navbar-links.open ul li {
+    margin-right: 8px;
     padding: 1em;
     border-bottom: 1px solid var(--primary-dark);
     width: 300%;
@@ -155,9 +156,15 @@
   .header-right {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     cursor: pointer;
     position: fixed;
     top: 20px;
     left: 20px;
     z-index: 999;
   }
+
+  .header-right > div {
+    margin-right: 54px;
+  }
+}

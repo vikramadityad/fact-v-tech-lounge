@@ -76,3 +76,9 @@
     justify-content: center;
   }
 }
+
+.about_right_content {
+  margin-top: 15px;
+  max-height: 650px;
+
+}
