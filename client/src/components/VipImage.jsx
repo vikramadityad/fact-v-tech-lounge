@@ -1,23 +1,10 @@
+import vip_event from "../images/vip_event.jpg";
+
 const vipImage = () => {
   return (
-    <section
-      className="vipImg"
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-      }}
-    >
-      <div>
-        {/* <center>
-          <img
-            src="src/images/vip_event.jpg"
-            width="1000px"
-            height="auto"
-          ></img>
-        </center> */}
-      </div>
-    </section>
+    <div style={{ width: "70%", margin: "0 auto" }}>
+      <img style={{ width: "100%" }} src={vip_event} alt="" />
+    </div>
   );
 };
 

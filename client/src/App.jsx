@@ -20,7 +20,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
 
-console.log('server url is ', import.meta.env.VITE_SERVER_URL);
+console.log("server url is ", import.meta.env.VITE_SERVER_URL);
 const httpLink = createHttpLink({
   uri: import.meta.env.VITE_SERVER_URL || "http://localhost:4000/graphql",
 });

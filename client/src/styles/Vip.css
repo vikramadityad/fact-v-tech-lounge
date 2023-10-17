@@ -1,21 +1,42 @@
 .subscribe {
-    color: white;
-    background-color: rgb(22, 22, 87);
-    border-radius: 8px;
-    border: 1px solid blue;
-    padding: 6px 12px 6px 12px;
+  color: white;
+  background-color: rgb(22, 22, 87);
+  border-radius: 8px;
+  border: 1px solid blue;
+  padding: 6px 12px 6px 12px;
 }
 
 .subscribe:hover {
-    background-color: rgb(8, 230, 182);
+  background-color: rgb(8, 230, 182);
 }
 
 .subscribe a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .subscribe a:hover {
-    color: black;
+  color: black;
+}
+.vipBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(226, 223, 223);
+  padding: 20px;
+  border: solid;
+  border-color: black;
+  gap: 40px;
+  margin: 0 160px;
+}
+@media only screen and (max-width: 1175px) {
+  .vipBox {
+    flex-wrap: wrap;
+  }
 }
 
+@media only screen and (max-width: 713px) {
+  .vipBox {
+    margin: 0;
+  }
+}
