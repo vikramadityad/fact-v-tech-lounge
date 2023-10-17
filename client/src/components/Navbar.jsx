@@ -122,7 +122,8 @@ const Navbar = ({
             ))}
           </ul>
 
-          {/* Right-side Buttons */}
+       
+
         </nav>
         <div className="header-right" style={{ display: "flex" }}>
           <div>

@@ -56,6 +56,25 @@ const typeDefs = gql`
       email: String!
       message: String!
     ): ContactForm!
+
+    updateUser(userId: ID!, updatedFields: UserInput!): User
+    deleteUser(userId: ID!): DeleteUserPayload
+    resetPassword(email: String!, password: String!): ResetPasswordResponse
+  }
+
+  input UserInput {
+    name: String
+    email: String
+    password: String
+  }
+
+  type DeleteUserPayload {
+    message: String!
+  }
+
+  type ResetPasswordResponse {
+    message: String
+    success: Boolean
   }
 `;
 
