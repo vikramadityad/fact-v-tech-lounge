@@ -10,7 +10,7 @@
 
 /* Each category section */
 .menu-section {
-  width: 90em;
+  width: 100%;
   margin: 0 auto 1.5em;
 }
 
@@ -50,7 +50,7 @@
   background: linear-gradient(to bottom, #e8d5b5, #f3f2f0);
   box-shadow: 0 0 15px black;
   border-radius: 15px;
-  width: 45%;
+  width: 40rem;
   margin: 25px;
   font-weight: 500;
   font-size: 0.8rem;
@@ -83,4 +83,25 @@
   font-size: 1.3rem;
   border-bottom: 2px solid var(--primary-dark);
   width: 100%;
+}
+
+@media only screen and (max-width: 850px) {
+  .menu-item {
+    width: 25rem;
+  }
+  .menu-description {
+    font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 556px) {
+  .menu {
+    padding: 0;
+  }
+  .menu-section {
+    height: 90%;
+  }
+  .menu-right-content {
+    padding: 5px;
+  }
 }
