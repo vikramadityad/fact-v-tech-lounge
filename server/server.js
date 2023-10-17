@@ -31,7 +31,7 @@ const server = new ApolloServer({
 });
 
 // Define the allowed origin(s)
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = [ process.env.CLIENT_URL || "http://localhost:5173" ];
 
 // Stripe Checkout Post Route
 app.post("/checkout", async (req, res) => {
