@@ -31,7 +31,7 @@ const About = () => {
       <section className="about_body">
         <div className="about_all">
           <div className="about_content">
-            <img src={bodyImg} alt="" />
+            <img src={bodyImg} alt="image of club" />
             <div className="about_right_content">
               <h3>Welcome to Fact-V-Tech-Lounge.</h3>
 

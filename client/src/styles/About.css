@@ -11,16 +11,15 @@
   text-align: center;
   color: whitesmoke;
   padding: 75px;
-  object-fit: contain;
-  margin: 0;
+  background-size: cover;
+  margin-bottom: 60px;
 }
 .about_header h2 {
   font-size: 3rem;
 }
 .about_content {
   display: flex;
-
-  margin: 50px 0 20px;
+  margin: 50px 0 60px;
   align-items: center;
   box-shadow: 0 0 5px black;
   border-radius: 6px;

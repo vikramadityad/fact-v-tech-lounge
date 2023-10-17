@@ -28,3 +28,18 @@
 .about_footer p {
   margin: 10px 35px 0;
 }
+
+@media only screen and (max-width: 525px) {
+  .about_footer {
+    height: 500px;
+  }
+  .about_footer h4 {
+    font-size: 0.7rem;
+  }
+  .about_footer h5 {
+    font-size: 0.6rem;
+  }
+  .about_footer p {
+    font-size: 0.6rem;
+  }
+}
