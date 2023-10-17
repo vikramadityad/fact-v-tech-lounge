@@ -4,7 +4,7 @@ import PrimaryButton from "./PrimaryButton";
 import CartButton from "./CartButton";
 import Auth from "./Login";
 import MyAccount from "./MyAccount";
-import logo from "../images/logo-h.png";
+import logo from "../images/Logo-H.png";
 import "../styles/Navbar.css";
 
 const Navbar = ({
