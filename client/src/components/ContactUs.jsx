@@ -38,9 +38,9 @@ const ContactUs = () => {
           message: formData.message,
         },
       });
-      console.log("Form data submitted:", data);
+      // console.log("Form data submitted:", data);
     } catch (error) {
-      console.log("Error submitting form data:", error);
+      // console.log("Error submitting form data:", error);
     }
   };
 

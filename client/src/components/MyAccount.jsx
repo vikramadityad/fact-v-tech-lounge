@@ -33,8 +33,8 @@ const MyAccount = ({ onClose }) => {
   
   const user = AuthService.getUser();
 
-  console.log('user from MyAccount:', user);
-  console.log('User name from Myaccount', user.data.name);
+  // console.log('user from MyAccount:', user);
+  // console.log('User name from Myaccount', user.data.name);
   const { loading, error, data } = useQuery(GET_USER, {
     variables: {
       name: user.data.name,
@@ -43,7 +43,7 @@ const MyAccount = ({ onClose }) => {
 
   useEffect(() => {
     if (data && !error) {
-      console.log('Data:', data);
+      // console.log('Data:', data);
       setUserData({
         name: data.getUser.name,
         email: data.getUser.email,
@@ -74,12 +74,12 @@ const MyAccount = ({ onClose }) => {
             userId: user.data._id,
           },
         });
-        console.log(result);
-        console.log(result.data.deleteUser.message);
+        // console.log(result);
+        // console.log(result.data.deleteUser.message);
         handleLogout();
       } catch (error) {
-        console.error('Error deleting account:', error.message);
-        console.log('Detailed error:', error);
+        // console.error('Error deleting account:', error.message);
+        // console.log('Detailed error:', error);
       }
     }
   };
