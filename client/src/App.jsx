@@ -9,9 +9,10 @@ import Events from "./components/Events";
 import About from "./components/About";
 import Vip from "./components/Vip";
 import VipImage from "./components/VipImage";
+import Confirmation from "./components/Confirmation";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
 
 
@@ -52,6 +53,7 @@ function App() {
     // Wrapped the application with ApolloProvider
     <ApolloProvider client={client}>
       <Router>
+
         <div className="App">
           <Navbar
             heroRef={heroRef}
@@ -96,6 +98,11 @@ function App() {
             <div ref={vipImageRef} style={sectionStyle}>
               <VipImage />
             </div>
+
+            <Routes>
+          <Route path="confirmation" element={<Confirmation />} />
+      </Routes>
+
             <div ref={contactRef} style={sectionStyle}>
               <ContactUs />
             </div>
