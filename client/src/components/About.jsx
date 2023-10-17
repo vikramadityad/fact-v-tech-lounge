@@ -33,7 +33,7 @@ const About = () => {
           <div className="about_content">
             <img src={bodyImg} alt="" />
             <div className="about_right_content">
-              <h3>Welcom to Fact-V-Tech-Lounge.</h3>
+              <h3>Welcome to Fact-V-Tech-Lounge.</h3>
 
               <p>
                 Fact-V-Tech Lounge is the embodiment of a vision that unites

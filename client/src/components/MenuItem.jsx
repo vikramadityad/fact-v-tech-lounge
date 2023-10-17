@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PrimaryButton from "./PrimaryButton";
+import "../styles/Menu.css";
 
 const MenuItem = ({
   item,
@@ -28,12 +29,16 @@ const MenuItem = ({
   return (
     <div className="menu-item">
       <img src={item.image} alt={item.name} className="item-img" />
-      <span>{item.name}</span>
-      <PrimaryButton
-        label="Add to Cart"
-        action={addToCart}
-        type="btn-primary"
-      />
+      <div className="menu-right-content">
+        <span className="menu-name">{item.name}</span>
+        <span className="menu-description">{item.description}</span>
+
+        <PrimaryButton
+          label="Add to Cart"
+          action={addToCart}
+          type="btn-primary"
+        />
+      </div>
     </div>
   );
 };
