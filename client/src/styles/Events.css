@@ -1,7 +1,6 @@
 .event_header {
   font-size: 28px;
   margin-left: 20px;
-
 }
 
 .event_section {
@@ -11,7 +10,6 @@
   gap: 10px;
   justify-content: center;
   margin-top: 30px;
-  
 }
 
 .event-item {
@@ -19,16 +17,15 @@
   /* border: 1px solid #e8d5b5; */
   background-color: #e8d5b5;
   text-align: center;
-  max-width:400px;
+  max-width: 400px;
   border-radius: 10px;
 }
 
-/* 
 .event-item img {
-    border-radius: 10px;
-    max-width: 350px;
-    height: auto;
-} */
+  border-radius: 10px;
+  max-width: 350px;
+  height: auto;
+}
 
 .event-item h3 {
   display: flex;
@@ -43,13 +40,13 @@
 }
 
 .event-links {
-/* text-align: center; */
-display: flex;
-justify-content: center;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
 }
 
 .event_popup {
-   display: block; 
+  display: block;
   background-color: #e8d5b5;
   flex-wrap: wrap;
   width: 800px;
@@ -72,9 +69,3 @@ justify-content: center;
   flex-wrap: wrap;
   justify-content: center;
 }
-
-
-
-
-
-

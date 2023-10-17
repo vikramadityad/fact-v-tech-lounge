@@ -165,7 +165,7 @@
     "_id": "price_1O1unBGtO1FmclxaTnPnTkPt",
     "category": "server",
     "image": "https://res.cloudinary.com/factv/image/upload/v1697411339/Images/pseudo-salad_avc2wa.jpg",
-    "description": "This unique salad blurs the lines between appearance and reality, creating a delightful culinary illusion that surprises and intrigues. Get this: A bed of clear, gelatinous -lettuce- that mimics the appearance of greens but disappears upon contact, leaving behind a refreshing, herb-infused essence. Then there's the tiny crouton-shaped sugar sculptures with tomatoes that appear to be whole but, when bitten into, burst into a cool and tangy tomato-flavored foam, along with delicate, translucent edible flowers with a subtle floral flavor that dances on your taste buds! We top this off with a crystal-clear, color-shifting dressing that changes both its appearance and taste as you drizzle it over the salad, offering a symphony of flavors from sweet to spicy to tangy. Welcome to AI!",
+    "description": "This unique salad blurs the lines between appearance and reality, creating a delightful culinary illusion that surprises and intrigues. Get this: A bed of clear, gelatinous -lettuce- that mimics the appearance of greens but disappears upon contact, leaving behind a refreshing, herb-infused essence. Then there's the tiny crouton-shaped sugar sculptures with tomatoes that appear to be whole but, when bitten into, burst into a cool and tangy tomato-flavored foam, along with delicate, translucent edible flowers with a subtle floral flavor that dances on your taste buds! ",
     "price": "12"
   },
   {
@@ -263,7 +263,7 @@
     "_id": "price_1O1vsRGtO1FmclxahXoIy8nc",
     "category": "client",
     "image": "https://res.cloudinary.com/factv/image/upload/v1697457139/Images/responsive-ribs_muapyl.jpg",
-    "description": "Just as responsive design adapts to different screen sizes, this dish combines a symphony of flavors and textures to create a memorable dining experience. A generous serving of slow-cooked, tender ribs that represent the hearty backbone of your meal, much like a well-structured website. A rich and savory Grid gravy, reminiscent of CSS Grid, which organizes content into responsive grids on webpages. A medley of fresh and colorful Media Query Vegetables that symbolize the importance of media queries in responsive design, adjusting content for different devices. A tangy Viewport Vinaigrette dressing drizzled over the vegetables, representing the viewport meta tag used in web development to control how web content is displayed on various devices. Served with crispy Flexbox Fries seasoned to perfection, symbolizing the flexibility and adaptability of CSS Flexbox, which simplifies layout design.",
+    "description": "Just as responsive design adapts to different screen sizes, this dish combines a symphony of flavors and textures to create a memorable dining experience. A generous serving of slow-cooked, tender ribs that represent the hearty backbone of your meal, much like a well-structured website. A rich and savory Grid gravy, reminiscent of CSS Grid, which organizes content into responsive grids on webpages. A medley of fresh and colorful Media Query Vegetables that symbolize the importance of media queries in responsive design, adjusting content for different devices. ",
     "price": "32"
   },
   {
@@ -271,7 +271,7 @@
     "_id": "price_1O1vt5GtO1FmclxacwvYcTw8",
     "category": "client",
     "image": "https://res.cloudinary.com/factv/image/upload/v1697457173/Images/express-steak_atybji.jpg",
-    "description": "Just as Express.js simplifies server-side programming, it is a coding-themed culinary masterpiece that pays tribute to the speed and efficiency of the Express.js framework in web development. A premium cut of sirloin steak, cooked to perfection, symbolizing the robustness and backbone of your meal, much like Express.js serves as the backbone of server-side web applications, with RESTful sliced red onions with a hint of spice, Node.js Potatoes - golden roasted potatoes that highlight the synergy between Express.js and Node.js, and a side of Middleware Mixed Greens -  a  refreshing mixed greens salad served with a middleware-inspired dressing, symbolizing the middleware functions that enhance Express.js applications with additional features, along with Router Roma Tomatoes - sliced Roma tomatoes that add a burst of color to your dish, representing the routing capabilities of Express.js, which directs client requests to the appropriate server endpoints.",
+    "description": "Just as Express.js simplifies server-side programming, it is a coding-themed culinary masterpiece that pays tribute to the speed and efficiency of the Express.js framework in web development. A premium cut of sirloin steak, cooked to perfection, symbolizing the robustness and backbone of your meal, much like Express.js serves as the backbone of server-side web applications, with RESTful sliced red onions with a hint of spice, Node.js Potatoes - golden roasted potatoes that highlight the synergy between Express.js and Node.js, and a side of Middleware Mixed Greens ",
     "price": "38"
   },
   {
@@ -295,7 +295,7 @@
     "_id": "price_1O1vumGtO1FmclxaX5bYVmbk",
     "category": "client",
     "image": "https://res.cloudinary.com/factv/image/upload/v1697457311/Images/weekly-challenge_azk0yf.jpg",
-    "description": "Our signature main course is not just a meal; it's a culinary adventure that tests your taste buds and showcases the creativity of our kitchen. It is a portion of succulent grilled chicken, garlic roasted shrimp, and a portion of tender beef, (or flavorful vegetarian alternatives), providing the foundation of your dish, with a medley of international flavors and ingredients, ranging from exotic spices to diverse vegetables and herbs, creating a harmonious fusion on your plate. A secret signature sauce, specially crafted by our chefs adds an element of surprise and excitement to your dish along with seasonal ingredients and garnishes that change regularly to keep -The Weekly Challenge- fresh and exciting with every visit. ",
+    "description": "Our signature main course is not just a meal; it's a culinary adventure that tests your taste buds and showcases the creativity of our kitchen. It is a portion of succulent grilled chicken, garlic roasted shrimp, and a portion of tender beef, (or flavorful vegetarian alternatives), providing the foundation of your dish, with a medley of international flavors and ingredients, ranging from exotic spices to diverse vegetables and herbs, creating a harmonious fusion on your plate. ",
     "price": "48"
   },
   {
