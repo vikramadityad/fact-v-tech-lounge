@@ -9,6 +9,7 @@ import imageSeven from "../images/chris.jpg";
 import imageEight from "../images/terrence.jpg";
 import "../styles/About.css";
 
+// Array for images
 const imgArray = [
   imageOne,
   imageTwo,
@@ -23,12 +24,17 @@ const imgArray = [
 const About = () => {
   return (
     <div>
+      {/* Banner  */}
+
       <section className="about_header">
         <div>
           <h2>ABOUT US</h2>
         </div>
       </section>
+
       <section className="about_body">
+        {/* Large Card  */}
+
         <div className="about_all">
           <div className="about_content">
             <img src={bodyImg} alt="image of club" />
@@ -51,6 +57,9 @@ const About = () => {
               </p>
             </div>
           </div>
+
+          {/* Small cards  */}
+
           <div className="about_img_section">
             <div className="about_sm_img">
               {imgArray.map((image, index) => (

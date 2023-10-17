@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
 }
-
+/* Large Card  */
 .about_header {
   background-image: url("../images/Hero-2.png");
   text-align: center;
@@ -24,6 +24,8 @@
   box-shadow: 0 0 5px black;
   border-radius: 6px;
 }
+
+/* Small Cards  */
 .about_content img {
   width: 60%;
   height: 400px;
@@ -98,5 +100,4 @@
 .about_right_content {
   margin-top: 15px;
   max-height: 650px;
-
 }
