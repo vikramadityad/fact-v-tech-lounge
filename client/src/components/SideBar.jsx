@@ -8,8 +8,10 @@ const SideBar = ({
   setItemCounter,
   itemCounter,
   removeCartItem,
+  setPurchaseComplete,
+  purchchaseComplete,
+  setThankYou,
 }) => {
-  const [purchaseComplete, setPurchaseComplete] = useState(false);
   //get total price of items in cart
 
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
@@ -22,10 +24,16 @@ const SideBar = ({
   };
 
   const fakeCheckout = () => {
-    if (cartItems.length > 0) {
+    if (cartItems.length >= 0) {
       console.log(cartItems);
       setPurchaseComplete(true);
-    } else console.log("no cart items");
+      setTimeout(() => {
+        setPurchaseComplete(false);
+        setItemCounter(0);
+        setCartItems([]);
+        setThankYou("Your order has been Processed");
+      }, 3000);
+    }
   };
 
   // console.log(cartItems);
