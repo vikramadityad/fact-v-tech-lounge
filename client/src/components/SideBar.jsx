@@ -46,7 +46,7 @@ const SideBar = ({
   return (
     <div className="sidebar">
       {cartItems.map((i) => (
-        <div className="sidebar_items">
+        <div className="sidebar_items" key={i.id}>
           <div className="sidebar_category">
             <img src={i.imgUrl} alt="i.name" />
             <div className="sidebar_description">
