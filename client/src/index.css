@@ -36,7 +36,7 @@ body {
   --grey: #948bb6;
   --secondary-highlight: #00e5b6;
   --white: #fbf7ff;
-  --white-accent: #e8d5b5;
+  --white-accent: rgb(240, 242, 243);
 }
 
 /* Link Styles */
