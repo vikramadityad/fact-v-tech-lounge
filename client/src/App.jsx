@@ -1,7 +1,12 @@
 import React, { useRef, useState } from "react";
 // Added Apollo Client Imports
-import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink, } from "@apollo/client";
-import { setContext } from '@apollo/client/link/context';
+import {
+  ApolloClient,
+  ApolloProvider,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
@@ -15,19 +20,17 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
 
-
 const httpLink = createHttpLink({
-  uri: 'http://localhost:4000/graphql',
+  uri: "http://localhost:4000/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
-
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
 
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
@@ -53,7 +56,6 @@ function App() {
     // Wrapped the application with ApolloProvider
     <ApolloProvider client={client}>
       <Router>
-
         <div className="App">
           <Navbar
             heroRef={heroRef}
@@ -69,15 +71,16 @@ function App() {
             setCartItems={setCartItems}
           />
 
-      <Routes>
-          <Route path="confirmation" element={<Confirmation />} />
-      </Routes>
+          <Routes>
+            <Route path="confirmation" element={<Confirmation />} />
+          </Routes>
 
           <div className="center-content">
             <div ref={heroRef} style={sectionStyle}>
               <Hero menuRef={menuRef} contactRef={contactRef} />
             </div>
             <div ref={menuRef} style={sectionStyle}>
+              <h2 style={{ marginLeft: "20px" }}>Menu</h2>
               <Menu
                 setItemCounter={setItemCounter}
                 itemCounter={itemCounter}
@@ -86,13 +89,12 @@ function App() {
               />
             </div>
             <div ref={eventsRef} style={sectionStyle}>
-              <Events 
-               setItemCounter={setItemCounter}
-               itemCounter={itemCounter}
-               cartItems={cartItems}
-               setCartItems={setCartItems}
-               />
-              
+              <Events
+                setItemCounter={setItemCounter}
+                itemCounter={itemCounter}
+                cartItems={cartItems}
+                setCartItems={setCartItems}
+              />
             </div>
             <div ref={aboutRef} style={sectionStyle}>
               <About />
@@ -104,7 +106,9 @@ function App() {
               <VipImage />
             </div>
 
-
+            <Routes>
+              <Route path="confirmation" element={<Confirmation />} />
+            </Routes>
 
             <div ref={contactRef} style={sectionStyle}>
               <ContactUs />

@@ -16,7 +16,6 @@
   padding: 0 1.5em;
   display: flex;
   justify-content: space-between;
-
 }
 
 /* Logo */
@@ -141,8 +140,7 @@
     font-size: 1.2rem;
     color: inherit;
   }
-  
-  
+
   .navbar-links.open.flex {
     display: flex;
   }
@@ -150,6 +148,10 @@
   .header-left {
     flex: 1;
     text-align: center;
+  }
+
+  .navbar-links.open.flex {
+    display: flex;
   }
 
   .header-right {
@@ -161,3 +163,4 @@
     left: 20px;
     z-index: 999;
   }
+}
