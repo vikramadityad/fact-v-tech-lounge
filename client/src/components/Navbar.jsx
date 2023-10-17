@@ -108,7 +108,10 @@ const Navbar = ({
         </div>
 
         {/* Navigation Links */}
-        <nav className={`navbar-links ${isMenuOpen ? "open" : ""}`} role="navigation">
+        <nav
+          className={`navbar-links ${isMenuOpen ? "open" : ""}`}
+          role="navigation"
+        >
           <ul>
             {navItems.map((item, index) => (
               <li key={index} className={isActive(item.path)}>
@@ -120,31 +123,31 @@ const Navbar = ({
           </ul>
 
           {/* Right-side Buttons */}
-          <div className="header-right" style={{ display: "flex" }}>
-            <div>
-              <CartButton
-                itemCounter={itemCounter}
-                setItemCounter={setItemCounter}
-                cartItems={cartItems}
-                setCartItems={setCartItems}
-              />
-            </div>
-            {isLoggedIn ? (
-              <PrimaryButton
-                label="My Account"
-                type="btn-secondary"
-                action={handleMyAccountClick}
-              />
-            ) : (
-              <PrimaryButton
-                label="Login"
-                id="loginbtn"
-                action={handleLoginClick}
-                type="btn-secondary"
-              />
-            )}
-          </div>
         </nav>
+        <div className="header-right" style={{ display: "flex" }}>
+          <div>
+            <CartButton
+              itemCounter={itemCounter}
+              setItemCounter={setItemCounter}
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+            />
+          </div>
+          {isLoggedIn ? (
+            <PrimaryButton
+              label="My Account"
+              type="btn-secondary"
+              action={handleMyAccountClick}
+            />
+          ) : (
+            <PrimaryButton
+              label="Login"
+              id="loginbtn"
+              action={handleLoginClick}
+              type="btn-secondary"
+            />
+          )}
+        </div>
       </div>
 
       {/* Modal for My Account */}
@@ -157,7 +160,10 @@ const Navbar = ({
       {/* Modal for Login */}
       {isLoginModalOpen && (
         <div className="login-modal">
-          <Auth onClose={handleCloseLoginModal} onLogin={handleLoginStateUpdate} />
+          <Auth
+            onClose={handleCloseLoginModal}
+            onLogin={handleLoginStateUpdate}
+          />
         </div>
       )}
     </header>

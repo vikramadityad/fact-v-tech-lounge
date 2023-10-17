@@ -8,6 +8,7 @@ const CartButton = ({
   setItemCounter,
   cartItems,
   setCartItems,
+  fakeCheckout,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -70,14 +71,20 @@ const CartButton = ({
           <Offcanvas.Title>Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <SideBar
-            key={cartItems._id}
-            cartItems={cartItems}
-            setItemCounter={setItemCounter}
-            itemCounter={itemCounter}
-            setCartItems={setCartItems}
-            removeCartItem={removeCartItem}
-          />
+          {cartItems.length > 0 ? (
+            <SideBar
+              key={cartItems._id}
+              cartItems={cartItems}
+              setItemCounter={setItemCounter}
+              itemCounter={itemCounter}
+              setCartItems={setCartItems}
+              removeCartItem={removeCartItem}
+            />
+          ) : (
+            <h2 style={{ textAlign: "center", marginTop: "50px" }}>
+              Cart Empty
+            </h2>
+          )}
         </Offcanvas.Body>
       </Offcanvas>
     </>
